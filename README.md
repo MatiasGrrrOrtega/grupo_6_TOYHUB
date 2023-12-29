@@ -28,3 +28,20 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
 **Jugueteria Pizzico (https://www.jugueteriapizzico.com/)**
 **Nombre (url)**
 **Nombre (url)**
+
+## Integrantes del Equipo
+ 
+ 1-Nombre y Apellido:
+ 1-Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
+
+ 2-Nombre y Apellido:
+ 2-Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
+
+ 3-Nombre y Apellido:
+ 3-Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
+
+ 4-Nombre y Apellido:
+ 4-Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
+
+ 5-Nombre y Apellido:
+ 5-Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
