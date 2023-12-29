@@ -20,3 +20,11 @@ Descubre el lugar perfecto para encontrar el regalo ideal y dar rienda suelta a 
 En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra excepcional, con atención a la calidad, la diversidad y la satisfacción del cliente. Explora nuestro catálogo y encuentra el muñeco perfecto para cada ocasión.
 
 ¡Gracias por elegirnos como tu destino para la magia de los muñecos! ✨
+
+## Referencia de Mercado
+
+**AliExpress (https://es.aliexpress.com/):**
+**FireWolf (https://www.firewolf.com.ar/)**
+**Jugueteria Pizzico (https://www.jugueteriapizzico.com/)**
+**Nombre (url)**
+**Nombre (url)**
