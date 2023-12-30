@@ -23,25 +23,25 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
 
 ## Referencia de Mercado
 
-**AliExpress:** https://es.aliexpress.com/
-**FireWolf:** https://www.firewolf.com.ar/
-**Jugueteria Pizzico:** https://www.jugueteriapizzico.com/
-**El mundo del juguete:** https://www.elmundodeljuguete.com.ar/
-**Nombre de la Pagina:** (url de la pagina)
+- **AliExpress:** https://es.aliexpress.com/
+- **FireWolf:** https://www.firewolf.com.ar/
+- **Jugueteria Pizzico:** https://www.jugueteriapizzico.com/
+- **El mundo del juguete:** https://www.elmundodeljuguete.com.ar/
+- **Nombre de la Pagina:** (url de la pagina)
 
 ## Integrantes del Equipo
  
-- **1-Nombre y Apellido:**
-- **1-Descripcion:**: Ej. Hobbies, estudios, edad, gustos, etc.
+- **Nombre y Apellido**
+- **Descripcion:** Ej. Hobbies, estudios, edad, gustos, etc.
 
-- **2-Nombre y Apellido:** Matias Gabriel Ortega
-- **2-Descripcion:**: Pueden llamarme "Papulo", es mi apodo, o Matias. Tengo 25 años. Soy de Jujuy, Argentina. Estudio Desarrollo de Videojuegos.Me gusta hacer ejercicio, futbol, cocinar y jugar videojuegos.  
+- **Matias Gabriel Ortega**
+- **Descripcion:** Pueden llamarme "Papulo", es mi apodo, o Matias. Tengo 25 años. Soy de Jujuy, Argentina. Estudio Desarrollo de Videojuegos.Me gusta hacer ejercicio, futbol, cocinar y jugar videojuegos.  
 
-- **3-Nombre y Apellido:**
-- **3-Descripcion:**: Ej. Hobbies, estudios, edad, gustos, etc.
+- **Nombre y Apellido**
+- **Descripcion:** Ej. Hobbies, estudios, edad, gustos, etc.
 
-- **4-Nombre y Apellido:**
-- **4-Descripcion:**: Ej. Hobbies, estudios, edad, gustos, etc.
+- **Nombre y Apellido**
+- **Descripcion:** Ej. Hobbies, estudios, edad, gustos, etc.
 
-- **5-Nombre y Apellido:** Elias Ezequiel Solis
-- **5-Descripcion:** Mi nombre es Elias, tengo 30 años. Soy estudiante de la carrera Analista Programador Universitario. Ademas de ser estudiante de programacion tengo hobbies como el futbol y andar en bicicleta. 
+- **Elias Ezequiel Solis**
+- **Descripcion:** Mi nombre es Elias, tengo 30 años. Soy estudiante de la carrera Analista Programador Universitario. Ademas de ser estudiante de programacion tengo hobbies como el futbol y andar en bicicleta. 
