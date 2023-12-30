@@ -26,7 +26,7 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
 **AliExpress (https://es.aliexpress.com/):**
 **FireWolf (https://www.firewolf.com.ar/)**
 **Jugueteria Pizzico (https://www.jugueteriapizzico.com/)**
-**Nombre (url)**
+**El mundo del juguete (https://www.elmundodeljuguete.com.ar/)**
 **Nombre (url)**
 
 ## Integrantes del Equipo
@@ -43,5 +43,5 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
  4-Nombre y Apellido:
  4-Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
 
- 5-Nombre y Apellido:
- 5-Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
+ 5-Elias Ezequiel Solis:
+ 5-Mi nombre es Elias, tengo 30 años. Soy estudiante de la carrera Analista Programador Universitario. Ademas de ser estudiante de programacion tengo hobbies como el futbol y andar en bicicleta. 
