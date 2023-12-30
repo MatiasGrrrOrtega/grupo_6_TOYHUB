@@ -31,17 +31,17 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
 
 ## Integrantes del Equipo
  
-<h2>Nombre y Apellido</h2>
-- **Descripcion:** Ej. Hobbies, estudios, edad, gustos, etc.
+ <h3>Nombre y Apellido</h3>
+  Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
 
-<h2>Matias Gabriel Ortega</h2>
-- **Descripcion:** Pueden llamarme "Papulo", es mi apodo, o Matias. Tengo 25 años. Soy de Jujuy, Argentina. Estudio Desarrollo de Videojuegos.Me gusta hacer ejercicio, futbol, cocinar y jugar videojuegos.  
+ <h3>Matias Gabriel Ortega</h3>
+  Descripcion: Pueden llamarme "Papulo", es mi apodo, o Matias. Tengo 25 años. Soy de Jujuy, Argentina. Estudio Desarrollo de Videojuegos.Me gusta hacer ejercicio, futbol, cocinar y jugar videojuegos.  
 
-- **Nombre y Apellido**
-- **Descripcion:** Ej. Hobbies, estudios, edad, gustos, etc.
+ <h3>Nombre y Apellido</h3>
+  Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
 
-- **Nombre y Apellido**
-- **Descripcion:** Ej. Hobbies, estudios, edad, gustos, etc.
+ <h3>Nombre y Apellido</h3>
+  Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
 
-<h2>Elias Ezequiel Solis</h2>
-- **Descripcion:** Mi nombre es Elias, tengo 30 años. Soy estudiante de la carrera Analista Programador Universitario. Ademas de ser estudiante de programacion tengo hobbies como el futbol y andar en bicicleta. 
+ <h3>Elias Ezequiel Solis</h3>
+  Descripcion: Mi nombre es Elias, tengo 30 años. Soy estudiante de la carrera Analista Programador Universitario. Ademas de ser estudiante de programacion tengo hobbies como el futbol y andar en bicicleta. 
