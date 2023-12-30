@@ -31,10 +31,10 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
 
 ## Integrantes del Equipo
  
-- **Nombre y Apellido**
+<h2>Nombre y Apellido</h2>
 - **Descripcion:** Ej. Hobbies, estudios, edad, gustos, etc.
 
-- **Matias Gabriel Ortega**
+<h2>Matias Gabriel Ortega</h2>
 - **Descripcion:** Pueden llamarme "Papulo", es mi apodo, o Matias. Tengo 25 años. Soy de Jujuy, Argentina. Estudio Desarrollo de Videojuegos.Me gusta hacer ejercicio, futbol, cocinar y jugar videojuegos.  
 
 - **Nombre y Apellido**
@@ -43,5 +43,5 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
 - **Nombre y Apellido**
 - **Descripcion:** Ej. Hobbies, estudios, edad, gustos, etc.
 
-- **Elias Ezequiel Solis**
+<h2>Elias Ezequiel Solis</h2>
 - **Descripcion:** Mi nombre es Elias, tengo 30 años. Soy estudiante de la carrera Analista Programador Universitario. Ademas de ser estudiante de programacion tengo hobbies como el futbol y andar en bicicleta. 
