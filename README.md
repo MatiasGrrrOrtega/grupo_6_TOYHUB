@@ -37,8 +37,8 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
  <h3>Matias Gabriel Ortega</h3>
   Descripcion: Pueden llamarme "Papulo", es mi apodo, o Matias. Tengo 25 años. Soy de Jujuy, Argentina. Estudio Desarrollo de Videojuegos.Me gusta hacer ejercicio, futbol, cocinar y jugar videojuegos.  
 
- <h3>Nombre y Apellido</h3>
-  Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
+ <h3>Evelyn Nahila Ramos</h3>
+  Descripcion: Me dicen Elyn por mi nick de videojuegos, pueden llamarme asi!, tengo 25 años. Soy estudiante de la Tec. Universitaria en Desarrollo Integral de Videojuego. Me gusta jugar, leer, estudiar y a veces hacer ejercicios sino ver series jeje.
 
  <h3>Nombre y Apellido</h3>
   Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
