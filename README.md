@@ -24,15 +24,15 @@ En Toy Hub, nos esforzamos por brindar una experiencia de compra excepcional, co
 ## Referencia de Mercado
 
 - **AliExpress:** https://es.aliexpress.com/
-    <h1>Esta pagina es de referencia porque cuenta con un Catalogo Extenso, con una amplia gama de productos. Contiene un Sistema de Busqueda eficiente, que facilita a los usuarios la busqueda de productos. El Proceso de Pago asegura transacciones seguras y confiables.</h1>
+    <h3>Esta pagina es de referencia porque cuenta con un Catalogo Extenso, con una amplia gama de productos. Contiene un Sistema de Busqueda eficiente, que facilita a los usuarios la busqueda de productos. El Proceso de Pago asegura transacciones seguras y confiables.</h3>
 - **FireWolf:** https://www.firewolf.com.ar/
-    <h1>Esta pagina es de referencia porque tiene un Diseño Simple y Atractivo, de interfaz visualmente agradable y facil de navegar.</h1>
+    <h3>Esta pagina es de referencia porque tiene un Diseño Simple y Atractivo, de interfaz visualmente agradable y facil de navegar.</h3>
 - **Jugueteria Pizzico:** https://www.jugueteriapizzico.com/
-    <h1>Esta pagina es de referencia porque...</h1>
+    <h3>Esta pagina es de referencia porque es una empresa familiar que ofrece los mejores productos ,tiene una amplia variedad y ofrece formas de pago accesibles y envios gratuitos. </h3>
 - **El mundo del juguete:** https://www.elmundodeljuguete.com.ar/
-    <h1>Esta pagina es de referencia porque...</h1>
+    <h3>Esta pagina es de referencia porque la pagina es viasualmente atractiva, podes comprar desde tu hogar ,posee atencion personalizada , reciben todos los medios de pago.  </h3>
 - **Mi jugueteria** https://mijugueteria.ar/s
-    <h1>Esta pagina es de referencia porque cuenta con una organización clara de juguetes por categoria. Destaca las opciones de pago y el envio gratuito. El Registro de Usuario es simple y con multiple opciones para facilitarle al usuario.</h1>
+    <h3>Esta pagina es de referencia porque cuenta con una organización clara de juguetes por categoria. Destaca las opciones de pago y el envio gratuito. El Registro de Usuario es simple y con multiple opciones para facilitarle al usuario.</h3>
 
 ## Integrantes del Equipo
  
