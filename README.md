@@ -1,7 +1,7 @@
 # grupo_6_TiendaDeMe-ecos
 # Bienvenido a la Tienda de Muñecos 🎉
 
-Descubre el lugar perfecto para encontrar el regalo ideal y dar rienda suelta a la imaginación. En nuestra tienda, nos dedicamos a ofrecer una cuidada selección de muñecos para dos públicos especiales: padres de familia que buscan el compañero de juegos perfecto para sus hijos y adultos coleccionistas que desean agregar piezas únicas a su tesoro.
+Bienvenido a ..... , el lugar perfecto donde la magia cobra vida y la imaginación se desborda. En nuestra tienda, nos apasiona ofrecerte una cuidada selección de muñecos para dos públicos muy especiales: padres de familia que buscan el compañero de juegos ideal para sus hijos y adultos coleccionistas que desean agregar piezas únicas a su tesoro.
 
 ## Oferta de Productos y Servicios
 
