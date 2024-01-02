@@ -27,7 +27,7 @@ En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra e
 - **FireWolf:** https://www.firewolf.com.ar/
 - **Jugueteria Pizzico:** https://www.jugueteriapizzico.com/
 - **El mundo del juguete:** https://www.elmundodeljuguete.com.ar/
-- **Nombre de la Pagina:** (url de la pagina)
+- **Mi jugueteria** https://mijugueteria.ar/s
 
 ## Integrantes del Equipo
  
