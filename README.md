@@ -36,8 +36,8 @@ En Toy Hub, nos esforzamos por brindar una experiencia de compra excepcional, co
 
 ## Integrantes del Equipo
  
- <h3>Nombre y Apellido</h3>
-  Descripcion: Ej. Hobbies, estudios, edad, gustos, etc.
+ <h3>Claudia Daniela Ortiz Cil</h3>
+  Descripcion: Mi nombre es Daniela, tengo 43 años, soy Tecnico en Gestión Contable e Impositiva.Soy de Jujuy, tengo dos hermosos hijos, en estos momentos soy ama de casa. Me gusta escuchar musica y cocinar. 
 
  <h3>Matias Gabriel Ortega</h3>
   Descripcion: Pueden llamarme "Papulo", es mi apodo, o Matias. Tengo 25 años. Soy de Jujuy, Argentina. Estudio Desarrollo de Videojuegos.Me gusta hacer ejercicio, futbol, cocinar y jugar videojuegos.  
