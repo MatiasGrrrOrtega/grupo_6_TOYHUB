@@ -1,7 +1,7 @@
-# grupo_6_TiendaDeMe-ecos
-# Bienvenido a la Tienda de Muñecos 🎉
+# Grupo_6_ToyHub
+# ¡Bienvenido a Toy Hub! 🎉
 
-Bienvenido a ..... , el lugar perfecto donde la magia cobra vida y la imaginación se desborda. En nuestra tienda, nos apasiona ofrecerte una cuidada selección de muñecos para dos públicos muy especiales: padres de familia que buscan el compañero de juegos ideal para sus hijos y adultos coleccionistas que desean agregar piezas únicas a su tesoro.
+Bienvenido a Toy Hub , el lugar perfecto donde la magia cobra vida y la imaginación se desborda. En nuestra tienda, nos apasiona ofrecerte una cuidada selección de muñecos para dos públicos muy especiales: padres de familia que buscan el compañero de juegos ideal para sus hijos y adultos coleccionistas que desean agregar piezas únicas a su tesoro.
 
 ## Oferta de Productos y Servicios
 
@@ -17,17 +17,22 @@ Bienvenido a ..... , el lugar perfecto donde la magia cobra vida y la imaginaci�
 
 **Adultos Coleccionistas:** Para los entusiastas de la colección, ofrecemos muñecos exclusivos y de edición limitada. Descubre piezas únicas que agregarán un toque especial a tu colección.
 
-En la Tienda de Muñecos, nos esforzamos por brindar una experiencia de compra excepcional, con atención a la calidad, la diversidad y la satisfacción del cliente. Explora nuestro catálogo y encuentra el muñeco perfecto para cada ocasión.
+En Toy Hub, nos esforzamos por brindar una experiencia de compra excepcional, con atención a la calidad, la diversidad y la satisfacción del cliente. Explora nuestro catálogo y encuentra el muñeco perfecto para cada ocasión.
 
 ¡Gracias por elegirnos como tu destino para la magia de los muñecos! ✨
 
 ## Referencia de Mercado
 
 - **AliExpress:** https://es.aliexpress.com/
+    <h1>Esta pagina es de referencia porque cuenta con un Catalogo Extenso, con una amplia gama de productos. Contiene un Sistema de Busqueda eficiente, que facilita a los usuarios la busqueda de productos. El Proceso de Pago asegura transacciones seguras y confiables.</h1>
 - **FireWolf:** https://www.firewolf.com.ar/
+    <h1>Esta pagina es de referencia porque tiene un Diseño Simple y Atractivo, de interfaz visualmente agradable y facil de navegar.</h1>
 - **Jugueteria Pizzico:** https://www.jugueteriapizzico.com/
+    <h1>Esta pagina es de referencia porque...</h1>
 - **El mundo del juguete:** https://www.elmundodeljuguete.com.ar/
+    <h1>Esta pagina es de referencia porque...</h1>
 - **Mi jugueteria** https://mijugueteria.ar/s
+    <h1>Esta pagina es de referencia porque cuenta con una organización clara de juguetes por categoria. Destaca las opciones de pago y el envio gratuito. El Registro de Usuario es simple y con multiple opciones para facilitarle al usuario.</h1>
 
 ## Integrantes del Equipo
  
