@@ -44,7 +44,8 @@ En Toy Hub, nos esforzamos por brindar una experiencia de compra excepcional, co
 
  <h3>Evelyn Nahila Ramos</h3>
   Descripcion: Me dicen Elyn por mi nick de videojuegos, pueden llamarme asi!, tengo 25 años. Soy estudiante de la Tec. Universitaria en Desarrollo Integral de Videojuego. Me gusta jugar, leer, estudiar y a veces hacer ejercicios sino ver series jeje.
-
+  GitHub: https://github.com/Evelyn027
+  
  <h3>Alfredo Alejandro Quispe</h3>
   Descripcion: Mi nombre es alejandro tengo 25 años, soy estudiante de la Tec. Universitaria en Desarrollo Integral de Videojuegos. Ademas de eso trabajo reparando celulares, pc, y basicamente todo lo que tenga q ver con tecnologia, me gusta hacer ejercicio, escuchar musica y jugar juegos.
 
