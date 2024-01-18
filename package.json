@@ -1,0 +1,27 @@
+{
+  "name": "toyhub",
+  "version": "1.0.0",
+  "description": "Bienvenido a Toy Hub , el lugar perfecto donde la magia cobra vida y la imaginación se desborda. En nuestra tienda, nos apasiona ofrecerte una cuidada selección de muñecos para dos públicos muy especiales: padres de familia que buscan el compañero de juegos ideal para sus hijos y adultos coleccionistas que desean agregar piezas únicas a su tesoro.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiasGrrrOrtega/grupo_6_TOYHUB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatiasGrrrOrtega/grupo_6_TOYHUB/issues"
+  },
+  "homepage": "https://github.com/MatiasGrrrOrtega/grupo_6_TOYHUB#readme",
+  "dependencies": {
+    "express": "4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
