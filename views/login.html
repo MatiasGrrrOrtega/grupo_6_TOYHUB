@@ -8,16 +8,26 @@
       href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/public/styles/general.css" />
+    <link rel="stylesheet" href="/public/styles/general.css">
     <link rel="stylesheet" href="/public/styles/login.css" />
     <title>ToyHub - Login</title>
   </head>
   <body>
+
+    <!-- Seccion del HEADER -->
     <header class="main-header">
-      <div class="header-left">
+      
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="/public/images/logo_toyhub.jpg" alt="Logo de ToyHub" />
+      </div>
+      <!-- Menú desplegable - Categorías -->
+
+      <div class="menu-container">
         <button class="btn btn-light menu-btn" onclick="toggleMenu()">
-          <img src="/public/images/logos/boton-menu.png" alt="Menú" />
+          <img src="/public/images/logos/boton-menu.png" alt="Menú">
         </button>
+
         <div class="menu-content">
           <!-- Contenido del menu desplegable con secciones -->
           <a href="#section1">Sección 1</a>
@@ -25,34 +35,29 @@
           <a href="#section3">Sección 3</a>
         </div>
       </div>
-      <div class="header-center">
-        <img src="/public/images/logo_toyhub.jpg" alt="Logo de ToyHub" />
-      </div>
-      <div class="header-right">
-        <!-- Contenedor para los iconos de usuario y carrito -->
-        <div class="user-cart-container">
-          <div class="user-icon" onclick="handleUserClick()">
-            <img src="/public/images/logos/user-icon.png" alt="Usuario" />
-          </div>
-          <div class="cart-icon" onclick="handleCartClick()">
-            <img src="/public/images/logos/cart-outline.png" alt="Carrito" />
-          </div>
-        </div>
-      </div>
-      <!-- Contenedor para la barra de busqueda -->
+    
+      <!-- Barra de busqueda -->
+
       <div class="search-container">
         <div class="search-bar">
-          <input
-            type="text"
-            placeholder="Buscar producto, marca, categoria..."
-            class="form-control search-input"
-          />
+          <input type="text" placeholder="Buscar producto, marca, categoria..." class="form-control search-input">
           <button type="button" class="btn btn-primary search-button">
-            <img src="/public/images/logos/search-icon.png" alt="Buscar" />
+            <img src="/public/images/logos/search-icon.png" alt="Buscar">
           </button>
         </div>
       </div>
+        <!-- Icono de usuario - Mi cuenta -->
+        <div class="user-cart-container">
+          <a href="/register" class="user-icon">
+            <img src="/public/images/logos/user-icon.png" alt="/views/register.html">
+          </a>
+          <!-- Icono de carrito - Mi carrito -->
+          <a href="/productCart" class="cart-icon">
+            <img src="/public/images/logos/cart-outline.png" alt="/views/productCart.html">
+          </a>
+        </div>
     </header>
+ 
     <main class="main-login">
       <form action="/login.html" method="POST">
         <h1>LOGIN <i class="fa-solid fa-user fa-xl"></i></h1>
@@ -75,7 +80,9 @@
         </div>
         <input type="submit" value="Iniciar Sesion" />
         <div class="buttons-login-option">
-          <a> <i class="fa-brands fa-google fa-xl"></i> Acceder con Google </a>
+          <a>
+            <i class="fa-brands fa-google fa-xl"></i> Acceder con Google
+          </a>
           <a>
             <i class="fa-brands fa-facebook fa-xl"></i> Acceder con Facebook
           </a>
@@ -86,78 +93,57 @@
         <a href="/views/register.html">Crear Cuenta</a>
       </div>
     </main>
+
+    <!-- Seccion del FOOTER -->
     <footer>
       <div class="footer">
         <!-- Contactanos -->
         <div class="contact-container">
-          <div class="contact-title">Contactanos</div>
-          <div class="email-info">
-            <div class="email-icon">
-              <img src="/public/images/logos/mail-outline.png" alt="Correo" />
+            <div class="contact-title">Contactanos</div>
+            <div class="email-info">
+                <div class="email-icon">
+                    <img src="/public/images/logos/mail-outline.png" alt="Correo">     
+                  </div>
+                <div class="email-text">toyHub@hotmail.com</div>
             </div>
-            <div class="email-text">toyHub@hotmail.com</div>
-          </div>
-          <div class="phone-info">
-            <div class="phone-icon">
-              <img
-                src="/public/images/logos/logo-whatsaap.png"
-                alt="WhatsApp"
-              />
+            <div class="phone-info">
+                <div class="phone-icon">
+                    <img src="/public/images/logos/logo-whatsaap.png" alt="WhatsApp">
+                </div>
+                <div class="phone-text">0800-555-555-5</div>
             </div>
-            <div class="phone-text">0800-555-555-5</div>
-          </div>
         </div>
 
         <!-- Marcas -->
         <div class="brands-container">
-          <div class="brands-title">Marcas</div>
-          <div class="brands-text">
-            Sega-Bandai-Banpresto-QPosket-Disney-<br />MegaHouse-Marvel
-          </div>
+            <div class="brands-title">Marcas</div>
+            <div class="brands-text">Sega-Bandai-Banpresto-QPosket-Disney-<br/>MegaHouse-Marvel</div>
         </div>
 
         <!-- Informacion -->
         <div class="info-container">
-          <div class="info-title">Informacion</div>
-          <div class="info-text">
-            Términos y Condiciones<br />Políticas de Privacidad<br />Políticas
-            de Envío<br />Sucursales
-          </div>
+            <div class="info-title">Informacion</div>
+            <div class="info-text">Términos y Condiciones<br/>Políticas de Privacidad<br/>Políticas de Envío<br/>Sucursales</div>
         </div>
 
         <!-- Servicio al Cliente -->
         <div class="customer-service-container">
-          <div class="customer-service-title">Servicio al Cliente</div>
-          <div class="customer-service-text">
-            Preguntas Frecuentes<br />Cambios y Devoluciones<br />Centro de
-            Ayuda
-          </div>
+            <div class="customer-service-title">Servicio al Cliente</div>
+            <div class="customer-service-text">Preguntas Frecuentes<br/>Cambios y Devoluciones<br/>Centro de Ayuda</div>
         </div>
 
         <!-- Siguenos en -->
         <div class="follow-container">
-          <div class="follow-title">Siguenos en</div>
-          <div class="social-icons">
-            <img src="/public/images/logos/logo-twitter.png" alt="Twitter" />
-            <img src="/public/images/logos/logo-facebook.png" alt="Facebook" />
-            <img
-              src="/public/images/logos/logo-instagram.png"
-              alt="Instagram"
-            />
-            <img src="/public/images/logos/logo-linkedin.png" alt="LinkedIn" />
-          </div>
+            <div class="follow-title">Siguenos en</div>
+            <div class="social-icons">
+                <img src="/public/images/logos/logo-twitter.png" alt="Twitter">
+                <img src="/public/images/logos/logo-facebook.png" alt="Facebook">
+                <img src="/public/images/logos/logo-instagram.png" alt="Instagram">
+                <img src="/public/images/logos/logo-linkedin.png" alt="LinkedIn">
+            </div>
         </div>
-      </div>
+    </div>
+    
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-buv2ZR7UpB3ZU8V+1zAZcI3LOdG2DQpIe+blpEj/5O8Dz87RNX/6beJYFQciG7Dl"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
