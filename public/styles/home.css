@@ -25,34 +25,44 @@ body{
 }
 
 /*----------SECCION DEL HEADER----------*/
+
+
+/* Logo */
+.logo-container img {
+  max-width: 20%;
+  border: 1px solid black;
+}
+
 .main-header {
   background-color: #FF3232;
   padding: 10px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center; 
-  flex-wrap: wrap;
-  
 }
 
+/* Ajustes para el menú desplegable */
+.logo-container,
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 .menu-btn {
-  font-size: 2em;
-  color: #FFF3F1; 
-  background-color: #FF3232; 
+  font-size: 1.5em;
+  color: #FFF3F1;
+  background-color: #FF3232;
   border: none;
-  
-
 }
-/* Estilos para el contenido del menu desplegable */
+
+/* Estilos para el contenido del menú desplegable */
 .menu-content {
   display: none;
+  background-color: #FF3232;
   position: absolute;
-  z-index: 1;
-  background-color: #FF3232; 
-  border: none;
-  
-  
+  top: 100%;
+  left: 0;
 }
 
 .menu-content a {
@@ -60,42 +70,23 @@ body{
   display: block;
   text-decoration: none;
   color: #FFF3F1;
-  
 }
 
-/* Estilos para el logo en el centro */
-.header-center {
+/* Estilos para la barra de búsqueda */
+.search-container {
   text-align: center;
-  flex: 1;
-  margin-left: 70px;
-
-}
-.header-center img {
-  max-width: 4em;
-  border: 1px solid black;
-  
+  width: 40%; /* Ajusta según tus necesidades */
 }
 
-/* Estilos para los iconos de usuario y carrito */
-.user-icon,
-.cart-icon {
-  cursor: pointer;
-  margin: 0 10px;
-  color: #FFF3F1;
-  font-size: 2em;
-}
-
-/* Estilos para la barra de busqueda */
 .search-bar {
   position: relative;
-  width: 80%;
-  margin: 0 auto;
   display: flex;
+  width: 100%;
   align-items: center;
-  border-radius: 100px ;
+  justify-content: center;
+  border-radius: 100px;
   overflow: hidden;
   
-
 }
 
 .search-input {
@@ -104,52 +95,35 @@ body{
   font-size: 1.2rem;
   border: none;
   outline: none;
-  background-color: #FFF3F1; 
-  
+  background-color: #FFF3F1;
 }
 
 .search-button {
   position: absolute;
-
   right: 0;
   padding: 0.7rem;
   font-size: 1.5rem;
   cursor: pointer;
   border: none;
-
-  
 }
 
-/* Contenedor para los iconos de usuario y carrito */
+/* Icono de usuario - Mi cuenta y Carrito - Mi carrito */
 .user-cart-container {
+  margin-left: auto;
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
-.search-container {
-  text-align: center;
-  width: 100%;
-}
-/*Lupa */
-.search-bar .btn-primary {
-  display: flex;
-  align-items: center;
-  
-}
-.search-bar .btn-primary i {
-  margin-right: 0.5rem;
-  
+.user-cart-container a {
+  color: #FFF3F1;
+  font-size: 1.5em;
 }
 
-/*----------SECCION DEL SLIDER----------*/
-.slider-container {
-  margin: auto;
-  background-color: white;
-  max-width: 1024px;
-  width: 100%;
-  position: relative;
-}
 
+
+
+/* -----------------------------------------  */
 .slider-container>ul, li{
   list-style: none;
 }
@@ -471,8 +445,9 @@ body{
   width: 100%;
   background: #1B2150;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
   padding: 20px 0; 
 }
 
@@ -491,8 +466,9 @@ body{
 .follow-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
+    
 }
 
 .contact-title,
@@ -503,6 +479,7 @@ body{
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 10px; 
+    text-align: center;
 }
 
 
@@ -511,12 +488,13 @@ body{
 .customer-service-text {
     font-size: 14px;
     font-weight: 400;
-    text-align: center;
+    align-items: flex-start;
+    
 }
 .email-info,
 .phone-info {
   display: flex;
-  align-items: center; 
+  align-items: flex-start; 
 }
 
 .email-icon,
@@ -528,4 +506,20 @@ body{
 .social-icons img {
   width: 30px; 
   margin-right: 10px; 
+}
+/* Media query para pantallas con un ancho max de dispositivos moviles */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .contact-container,
+  .brands-container,
+  .info-container,
+  .customer-service-container,
+  .follow-container {
+    align-items: center; 
+    text-align: center;
+  }
 }

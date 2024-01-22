@@ -12,10 +12,18 @@
 
     <!-- Seccion del HEADER -->
     <header class="main-header">
-      <div class="header-left">
+      
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="/public/images/logo_toyhub.jpg" alt="Logo de ToyHub" />
+      </div>
+      <!-- Menú desplegable - Categorías -->
+
+      <div class="menu-container">
         <button class="btn btn-light menu-btn" onclick="toggleMenu()">
           <img src="/public/images/logos/boton-menu.png" alt="Menú">
         </button>
+
         <div class="menu-content">
           <!-- Contenido del menu desplegable con secciones -->
           <a href="#section1">Sección 1</a>
@@ -23,21 +31,9 @@
           <a href="#section3">Sección 3</a>
         </div>
       </div>
-      <div class="header-center">
-        <img src="/public/images/logo_toyhub.jpg" alt="Logo de ToyHub" />
-      </div>
-      <div class="header-right">
-        <!-- Contenedor para los iconos de usuario y carrito -->
-        <div class="user-cart-container">
-          <div class="user-icon" onclick="handleUserClick()">
-            <img src="/public/images/logos/user-icon.png" alt="Usuario">
-          </div>
-          <div class="cart-icon" onclick="handleCartClick()">
-            <img src="/public/images/logos/cart-outline.png" alt="Carrito">
-          </div>
-        </div>
-      </div>
-      <!-- Contenedor para la barra de busqueda -->
+    
+      <!-- Barra de busqueda -->
+
       <div class="search-container">
         <div class="search-bar">
           <input type="text" placeholder="Buscar producto, marca, categoria..." class="form-control search-input">
@@ -46,6 +42,18 @@
           </button>
         </div>
       </div>
+        <!-- Icono de usuario - Mi cuenta -->
+        <div class="user-cart-container"></div>
+          <a href="/register" class="user-icon">
+            <img src="/public/images/logos/user-icon.png" alt="Usuario">
+          </a>
+          <!-- Icono de carrito - Mi carrito -->
+          <a href="/productCart" class="cart-icon">
+            <img src="/public/images/logos/cart-outline.png" alt="Carrito">
+          </a>
+        </div>
+      
+      
     </header>
 
   <!-- Seccion del MAIN -->
