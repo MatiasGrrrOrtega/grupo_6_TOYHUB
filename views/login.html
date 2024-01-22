@@ -1,23 +1,52 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/styles/general.css">
+    <link rel="stylesheet" href="/public/styles/login.css" />
+    <title>ToyHub - Login</title>
   </head>
   <body>
-   <form action="/login.html" method="POST">
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="contraseña">Contraseña:</label>
-    <input type="password" id="contraseña" name="contraseña" required>
-
-    <input type="submit" value="iniciar sesion">
-
-    
-    <button>Acceder con Google </button>
-    
-    <button>Acceder con Facebook </button>
-    <input type="submit" value="Crear cuenta">
-   </form>
+    <main class="main-login">
+      <form action="/login.html" method="POST">
+        <h1>LOGIN <i class="fa-solid fa-user fa-xl"></i></h1>
+        <div class="form-register">
+          <div class="form-group">
+            <input type="email" id="email" name="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="contraseña" name="contraseña" required />
+            <label for="contraseña">Contraseña</label>
+          </div>
+        </div>
+        <div class="form-help">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+          <label for="remember-me">
+            Recordarme
+            <input type="checkbox" name="remember-me" id="remember-me" />
+          </label>
+        </div>
+        <input type="submit" value="Iniciar Sesion" />
+        <div class="buttons-login-option">
+          <a>
+            <i class="fa-brands fa-google fa-xl"></i> Acceder con Google
+          </a>
+          <a>
+            <i class="fa-brands fa-facebook fa-xl"></i> Acceder con Facebook
+          </a>
+        </div>
+      </form>
+      <div class="register">
+        <p>¿No tienes cuenta?</p>
+        <a href="/views/register.html">Crear Cuenta</a>
+      </div>
+    </main>
   </body>
 </html>
