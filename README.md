@@ -55,3 +55,6 @@ En Toy Hub, nos esforzamos por brindar una experiencia de compra excepcional, co
  <h3>Elias Ezequiel Solis</h3>
   Descripcion: Mi nombre es Elias, tengo 30 años. Soy estudiante de la carrera Analista Programador Universitario. Ademas de ser estudiante de programacion tengo hobbies como el futbol y andar en bicicleta.
   GitHub: https://github.com/elias38470
+
+## Area de asignacion de tareas - TRELLO
+<h3>https://trello.com/b/cHFWaSec/toyhub</h3>
