@@ -253,7 +253,7 @@ body{
   width: 100%;
   height: 70px;
   text-align: center;
-  color: white;
+  color: var(--color-white);
   display: flex;
   justify-content:center;
   align-items: center;
@@ -384,6 +384,10 @@ body{
   font-size: 1.2em;
   cursor: pointer;
   transition: background-color ease 0.3s;
+}
+
+.products-container .view-more-button:hover {
+  background-color: #c40000;
 }
 
 /*-------SECCION DE SPONSORS---------*/
