@@ -88,7 +88,7 @@ body{
 /* Estilos para la barra de busqueda */
 .search-bar {
   position: relative;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -110,13 +110,13 @@ body{
 
 .search-button {
   position: absolute;
-  top: 0;
+
   right: 0;
   padding: 0.7rem;
   font-size: 1.5rem;
   cursor: pointer;
   border: none;
-  color: #FF3232;
+
   
 }
 
