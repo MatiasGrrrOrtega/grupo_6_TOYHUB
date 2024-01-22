@@ -24,9 +24,121 @@ body{
   background-color: var(--color-background);
 }
 
-.main-home{
-  max-width: 1024px;
-  margin: auto;
+/*----------SECCION DEL HEADER----------*/
+.main-header {
+  background-color: #FF3232;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  
+}
+
+
+.menu-btn {
+  font-size: 2em;
+  color: #FFF3F1; 
+  background-color: #FF3232; 
+  border: none;
+  
+
+}
+/* Estilos para el contenido del menu desplegable */
+.menu-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #FF3232; 
+  border: none;
+  
+  
+}
+
+.menu-content a {
+  padding: 12px;
+  display: block;
+  text-decoration: none;
+  color: #FFF3F1;
+  
+}
+
+/* Estilos para el logo en el centro */
+.header-center {
+  text-align: center;
+  flex: 1;
+  margin-left: 70px;
+
+}
+.header-center img {
+  max-width: 4em;
+  border: 1px solid black;
+  
+}
+
+/* Estilos para los iconos de usuario y carrito */
+.user-icon,
+.cart-icon {
+  cursor: pointer;
+  margin: 0 10px;
+  color: #FFF3F1;
+  font-size: 2em;
+}
+
+/* Estilos para la barra de busqueda */
+.search-bar {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border-radius: 100px ;
+  overflow: hidden;
+  
+
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background-color: #FFF3F1; 
+  
+}
+
+.search-button {
+  position: absolute;
+
+  right: 0;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+
+  
+}
+
+/* Contenedor para los iconos de usuario y carrito */
+.user-cart-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  text-align: center;
+  width: 100%;
+}
+/*Lupa */
+.search-bar .btn-primary {
+  display: flex;
+  align-items: center;
+  
+}
+.search-bar .btn-primary i {
+  margin-right: 0.5rem;
+  
 }
 
 /*----------SECCION DEL SLIDER----------*/
@@ -355,4 +467,69 @@ body{
     width: 160px;
     height: 60px;
   }
+}
+
+
+/*----------SECCION DEL FOOTER----------*/
+.footer {
+  width: 100%;
+  background: #1B2150;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0; 
+}
+
+/* Estilos compartidos para los elementos de texto */
+.footer div {
+  color: white;
+  font-family: 'Comic Sans MS', sans-serif;
+  word-wrap: break-word;
+}
+
+
+.contact-container,
+.brands-container,
+.info-container,
+.customer-service-container,
+.follow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-title,
+.brands-title,
+.info-title,
+.customer-service-title,
+.follow-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px; 
+}
+
+
+.brands-text,
+.info-text,
+.customer-service-text {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+.email-info,
+.phone-info {
+  display: flex;
+  align-items: center; 
+}
+
+.email-icon,
+.phone-icon {
+  margin-right: 10px; 
+}
+
+/* Redes sociales */
+.social-icons img {
+  width: 30px; 
+  margin-right: 10px; 
 }
