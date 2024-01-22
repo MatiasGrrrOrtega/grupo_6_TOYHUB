@@ -464,3 +464,68 @@ body{
     height: 60px;
   }
 }
+
+
+/*----------SECCION DEL FOOTER----------*/
+.footer {
+  width: 100%;
+  background: #1B2150;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0; 
+}
+
+/* Estilos compartidos para los elementos de texto */
+.footer div {
+  color: white;
+  font-family: 'Comic Sans MS', sans-serif;
+  word-wrap: break-word;
+}
+
+
+.contact-container,
+.brands-container,
+.info-container,
+.customer-service-container,
+.follow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-title,
+.brands-title,
+.info-title,
+.customer-service-title,
+.follow-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px; 
+}
+
+
+.brands-text,
+.info-text,
+.customer-service-text {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+.email-info,
+.phone-info {
+  display: flex;
+  align-items: center; 
+}
+
+.email-icon,
+.phone-icon {
+  margin-right: 10px; 
+}
+
+/* Redes sociales */
+.social-icons img {
+  width: 30px; 
+  margin-right: 10px; 
+}
