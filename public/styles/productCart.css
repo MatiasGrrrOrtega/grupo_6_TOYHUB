@@ -1,0 +1,243 @@
+:root {
+  --color-principal: #fa5f49;
+  --color-secundario: #f9a59a;
+  --color-terciario: #ff3232;
+  --color-cuarto: #f9d99a;
+  --color-quinto: #add5fa;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'FOTO ID'
+    'FOTO descripcion'
+    'FOTO precio'
+    'FOTO cantidad'
+    'FOTO otra-cosa'
+    'FOTO eliminar-del-carrito';
+}
+
+section {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.product-section {
+  padding: 20px;
+  color: var(--color-blue-dark-950);
+}
+.subrayado {
+  text-decoration: underline;
+  text-decoration-color: var(--color-lightblue-500);
+  text-decoration-thickness: 3px;
+}
+
+.product-section h1 {
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Comic Sans MS', cursive;
+}
+.p1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  background-color: var(--color-white);
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  gap: 15px;
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+}
+.detalle {
+  background-color: var(--color-light-50);
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.FOTO {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.FOTO img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.descripcion {
+  max-width: 100%;
+  color: var(--color-blue-dark-950);
+}
+
+.descripcion p {
+  margin-bottom: 1px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.descripcion p:first-child{
+  font-size: 1.1em;
+}
+
+.precio {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cantidad {
+  font-size: 20px;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.tp {
+  text-align: center;
+}
+.total {
+  font-size: 2em;
+  font-weight: bold;
+}
+.importe {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--color-red-600);
+}
+.miBot {
+  background-color: var( --color-lightblue-500);
+  border: none;
+}
+.borrarPr {
+  margin: 12px 0;
+}
+.bp {
+  border: none;
+  padding: 7px 20px;
+  background-color: var( --color-red-600);
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.5s ease;
+  font-size: 1em;
+}
+.bp:hover {
+  background-color: var(--color-red-dark-950);
+}
+
+.otroBot {
+  padding: auto;
+  background-color: var(--color-blue-dark-950);
+}
+.tamañoBotn {
+  color: var(--color-light-50);
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: bold;
+  width: 250px;
+  height: 40px;
+  margin: 10px;
+}
+.botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.botonIzq button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-red-ligth-300);
+  border: none;
+  border-radius: 3px;
+  color: var(--color-red-600);
+}
+
+.botonIzq button span {
+  font-size: 30px;
+}
+
+.botonDer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  border-radius: 25px;
+  padding: 3px;
+}
+
+.botonDer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue-dark-950);
+  color: var(--color-light-50);
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.botonDer button span {
+  font-size: 30px;
+}
+
+.totales {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 0px 0px;
+}
+
+@media screen and (max-width: 480px) {
+  .totales {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 0px 0px;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .descripcion p:first-child{
+    font-size: 0.9em;
+  }
+
+  .precio {
+    font-size: 1em;
+  }
+
+  .borrarPr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+}
+
+.descripcion {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.precio {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.cantidad {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.otra-cosa {
+  grid-area: 5 / 2 / 7 / 3;
+}
+.eliminar-del-carrito- {
+  grid-area: 6 / 1 / 7 / 2;
+}

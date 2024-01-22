@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('../font/COMIC.TTF') format('truetype');
+}
+
+:root{
+  --color-background: #DDE7FC;
+  --color-white: #FFFFFF;
+  --color-light-50:#f0f4fe;
+  --color-blue-dark-950:#1b2150;
+  --color-red-600:#ED1515;
+  --color-red-ligth-300:#FFC5C5;
+  --color-red-dark-950:#4b0404;
+  --color-lightblue-500:#4773EA;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+body{
+  height: 100vh;
+  background-color: var(--color-background);
+}
