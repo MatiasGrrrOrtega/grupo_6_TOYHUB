@@ -1,0 +1,32 @@
+{
+  "marcas":[
+    {
+      "id":1,
+      "img": "logo-sega.svg"
+    },
+    {
+      "id":2,
+      "img": "logo-bandai.svg"
+    },
+    {
+      "id":3,
+      "img": "logo-banpresto.svg"
+    },
+    {
+      "id":4,
+      "img": "logo-disney.svg"
+    },
+    {
+      "id":5,
+      "img": "logo-hasbro.svg"
+    },
+    {
+      "id":6,
+      "img": "logo-marvel.svg"
+    },
+    {
+      "id":7,
+      "img": "logo-megaHouse.svg"
+    }
+  ]
+}
