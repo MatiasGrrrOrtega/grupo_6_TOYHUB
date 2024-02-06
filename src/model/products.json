@@ -6,7 +6,11 @@
       "price": 3.807,
       "dues": 1.269,
       "share": 3,
-      "img": "peluche-de-mickey-y-minnie.webp"
+      "img": "peluche-de-mickey-y-minnie.webp",
+      "category": "Peluches",
+      "stock": 10,
+      "brand": "Disney",
+      "description": "Peluches de Mickey y Minnie de gran tamaño para niños y niñas."
     },
     {
       "id": 2,
@@ -14,7 +18,11 @@
       "price": 9.334,
       "dues": 2.333,
       "share": 4,
-      "img": "Sanrio-Cinnamoroll-mu-eco-de-peluche-de-gran-tama-o-para-ni-os-y-ni-as.jpg_.webp"
+      "img": "Sanrio-Cinnamoroll-mu-eco-de-peluche-de-gran-tama-o-para-ni-os-y-ni-as.jpg_.webp",
+      "category": "Peluches",
+      "stock": 20,
+      "brand": "Sanrio",
+      "description": "Peluche de Cinnamoroll de gran tamaño para niños y niñas."
     },
     {
       "id": 3,
@@ -22,7 +30,10 @@
       "price": 8.358,
       "dues": 1.393,
       "share": 4,
-      "img": "p1.webp"
+      "img": "p1.webp",
+      "category": "Peluches",
+      "stock": 15,
+      "description": "Peluche de Sullivan de gran tamaño para niños y niñas."
     },
     {
       "id": 4,
@@ -30,7 +41,11 @@
       "price": 12.063,
       "dues": 2.010,
       "share": 6,
-      "img": "Figuras-de-acci-n-de-Marvel-Black-Panther-nueva-animaci-n-perif-rica-articulaciones-de-dibujos.jpg_.webp"
+      "img": "Figuras-de-acci-n-de-Marvel-Black-Panther-nueva-animaci-n-perif-rica-articulaciones-de-dibujos.jpg_.webp",
+      "category": "Figuras de acción",
+      "stock": 5,
+      "brand": "Marvel",
+      "description": "Figura de acción de Black Panther de gran tamaño para niños y niñas."
     },
     {
       "id": 5,
@@ -38,7 +53,11 @@
       "price": 2.185,
       "dues": 1.092,
       "share": 2,
-      "img": "Banpresto-figura-de-acci-n-de-One-Piece-juguete-de-Anime-Roronoa-Zoro-tres-cuchillos-de.jpg_640x640.jpg_.webp"
+      "img": "Banpresto-figura-de-acci-n-de-One-Piece-juguete-de-Anime-Roronoa-Zoro-tres-cuchillos-de.jpg_640x640.jpg_.webp",
+      "category": "Figuras de acción",
+      "stock": 8,
+      "brand": "One Piece",
+      "description": "Figura de acción de Roronoa Zoro de gran tamaño para niños y niñas."
     },
     {
       "id": 6,
@@ -46,7 +65,11 @@
       "price": 18.867,
       "dues": 3.144,
       "share": 6,
-      "img": "Hasbro-Frozen-2-Hair-Salon-Doll-Series-Elsa-Anna-Play-House-Toys-E6950-figuras-de-acci.jpg_.webp"
+      "img": "Hasbro-Frozen-2-Hair-Salon-Doll-Series-Elsa-Anna-Play-House-Toys-E6950-figuras-de-acci.jpg_.webp",
+      "category": "Figuras de acción",
+      "stock": 3,
+      "brand": "Disney",
+      "description": "Figura de acción de las princesas de Frozen de gran tamaño para niños y niñas."
     },
     {
       "id": 7,
@@ -54,7 +77,11 @@
       "price": 401,
       "dues": 200,
       "share": 2,
-      "img": "Figura-DE-ACCI-N-DE-KAngel-de-desfile-emergente-modelo-de-coleccion.webp"
+      "img": "Figura-DE-ACCI-N-DE-KAngel-de-desfile-emergente-modelo-de-coleccion.webp",
+      "category": "Figuras de acción",
+      "stock": 12,
+      "brand": "KAngel",
+      "description": "Figura de acción de KAngel de gran tamaño para niños y niñas."
     },
     {
       "id": 8,
@@ -62,7 +89,11 @@
       "price": 1.630,
       "dues": 815,
       "share": 2,
-      "img": "Guardianes-de-la-galaxia-cohete-mapache-anime-perif-rico-kawaii-lindo-dibujos-animados-bobblehead-mu-eca.jpg_.webp"
+      "img": "Trajes-de-mu-ecas-de-43-cm-para-mu-ecas-de-17-pulgadas-mono-de-mono.jpg_.webp",
+      "category": "Muñecas",
+      "stock": 7,
+      "brand": "Disney",
+      "description": "Muñeca de Stitch de gran tamaño para niños y niñas."
     },
     {
       "id": 9,
@@ -70,7 +101,11 @@
       "price": 36.605,
       "dues": 3.050,
       "share": 12,
-      "img": "Guardianes-de-la-galaxia-cohete-mapache-anime-perif-rico-kawaii-lindo-dibujos-animados-bobblehead-mu-eca.jpg_.webp"
+      "img": "Guardianes-de-la-galaxia-cohete-mapache-anime-perif-rico-kawaii-lindo-dibujos-animados-bobblehead-mu-eca.jpg_.webp",
+      "category": "Muñecas",
+      "stock": 4,
+      "brand": "Marvel",
+      "description": "Funko-Pop de Rocket de los vengadores de gran tamaño para niños y niñas."
     },
     {
       "id": 10,
@@ -78,7 +113,11 @@
       "price": 818,
       "dues": 407,
       "share": 2,
-      "img": "p2.webp"
+      "img": "p2.webp",
+      "category": "Peluches",
+      "stock": 6,
+      "brand": "Pou",
+      "description": "Pou-muñeco de peluche de 22cm/8,6 pulgadas, juguete de Alien de dibujos animados, Kawaii, figura de juego caliente, regalos para fanáticos."
     },
     {
       "id": 11,
@@ -86,7 +125,11 @@
       "price": 57.266,
       "dues": 3.181,
       "share": 18,
-      "img": "p3.webp"
+      "img": "p3.webp",
+      "category": "Figuras de acción",
+      "stock": 2,
+      "brand": "Madoka",
+      "description": "Figura de acción de Puella Magi Madoka"
     },
     {
       "id": 12,
@@ -94,7 +137,11 @@
       "price": 6.547,
       "dues": 2.182,
       "share": 3,
-      "img": "p4.webp"
+      "img": "p4.webp",
+      "category": "Figuras de acción",
+      "stock": 9,
+      "brand": "DC",
+      "description": "Figura de acción de Superman de gran tamaño para niños y niñas."
     }
   ]
 }

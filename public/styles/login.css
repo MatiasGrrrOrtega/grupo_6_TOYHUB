@@ -1,106 +1,13 @@
-
-/*----------SECCION DEL HEADER----------*/
-/* Logo */
-.logo-container img {
-  max-width: 20%;
-  border: 1px solid black;
-}
-
-.main-header {
-  background-color: #FF3232;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Ajustes para el menú desplegable */
-.logo-container,
-.menu-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.menu-btn {
-  font-size: 1.5em;
-  color: #FFF3F1;
-  background-color: #FF3232;
-  border: none;
-}
-
-/* Estilos para el contenido del menú desplegable */
-.menu-content {
-  display: none;
-  background-color: #FF3232;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-.menu-content a {
-  padding: 12px;
-  display: block;
-  text-decoration: none;
-  color: #FFF3F1;
-}
-
-/* Estilos para la barra de búsqueda */
-.search-container {
-  text-align: center;
-  width: 40%; /* Ajusta según tus necesidades */
-}
-
-.search-bar {
-  position: relative;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100px;
-  overflow: hidden;
-  
-}
-
-.search-input {
-  flex: 1;
-  padding: 0.7rem;
-  font-size: 1.2rem;
-  border: none;
-  outline: none;
-  background-color: #FFF3F1;
-}
-
-.search-button {
-  position: absolute;
-  right: 0;
-  padding: 0.7rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border: none;
-}
-
-/* Icono de usuario - Mi cuenta y Carrito - Mi carrito */
-.user-cart-container {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.user-cart-container a {
-  color: #FFF3F1;
-  font-size: 1.5em;
-}
-
 .main-login{
-  max-width: 1024px;
-  margin: auto;
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.form-title{
+  font-size: 1.5em;
 }
 
 form{
@@ -178,7 +85,7 @@ form input[type="submit"]:hover{
   left: 0;
   padding: 10px;
   margin: 5px 0;
-  font-size: 1em;
+  font-size: 0.8em;
   color: var(--color-blue-dark-950);
   transition: top ease .3s, left ease .3s, padding ease .3s, margin ease .3s, font-size ease .3s, background-color ease .3s, color ease .3s;
 }
@@ -188,7 +95,7 @@ form input[type="submit"]:hover{
   left: -10px;
   padding: 5px;
   margin: 0;
-  font-size: 0.8em;
+  font-size: 0.7em;
   background-color: var(--color-lightblue-500);
   color: var(--color-white);
   border-radius: 8px;
@@ -199,7 +106,7 @@ form input[type="submit"]:hover{
   left: -10px;
   padding: 5px;
   margin: 0;
-  font-size: 0.8em;
+  font-size: 0.7em;
   background-color: var(--color-lightblue-500);
   color: var(--color-white);
   border-radius: 8px;
@@ -222,6 +129,7 @@ form .form-help a{
   color: var(--color-lightblue-500);
   text-decoration: underline;
   transition: color ease .3s;
+  font-size: 0.9em;
 }
 
 form .form-help a:hover{
@@ -230,6 +138,7 @@ form .form-help a:hover{
 
 form .form-help label{
   color: var(--color-blue-dark-950);
+  font-size: 0.9em;
 }
 
 form .buttons-login-option{
@@ -250,7 +159,7 @@ form .buttons-login-option a{
   outline: none;
   background-color: var(--color-white);
   color: var(--color-blue-dark-950);
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: bold;
   cursor: pointer;
   transition: background-color ease .3s;
@@ -260,6 +169,10 @@ form .buttons-login-option a{
 form .buttons-login-option a:hover{
   background-color: var(--color-lightblue-500);
   color: var(--color-white);
+}
+
+form input[type="submit"]{
+  font-size: 0.8em;
 }
 
 .register{
@@ -273,13 +186,20 @@ form .buttons-login-option a:hover{
   border-radius: 8px;
 }
 
+.register p{
+  font-size: 0.8em;
+  color: var(--color-blue-dark-950);
+}
+
 .register a{
   background-color: var(--color-blue-dark-950);
   color: var(--color-light-50);
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
   text-decoration: none;
   transition: color ease .3s;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 .register a:hover{
@@ -328,7 +248,7 @@ form .buttons-login-option a:hover{
 
   form input[type="submit"]{
     width: 150px;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   form .form-help{
@@ -336,7 +256,7 @@ form .buttons-login-option a:hover{
   }
 
   form .buttons-login-option a{
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .register{
@@ -344,104 +264,18 @@ form .buttons-login-option a:hover{
   }
 
   form .form-register .form-group label{
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   form .form-register .form-group input{
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   form .form-register .form-group input:focus + label{
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   form .form-register .form-group input:valid + label{
-    font-size: 1em;
-  }
-}
-
-
-
-/*----------SECCION DEL FOOTER----------*/
-.footer {
-  width: 100%;
-  background: #1B2150;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 20px 0; 
-}
-
-/* Estilos compartidos para los elementos de texto */
-.footer div {
-  color: white;
-  font-family: 'Comic Sans MS', sans-serif;
-  word-wrap: break-word;
-}
-
-
-.contact-container,
-.brands-container,
-.info-container,
-.customer-service-container,
-.follow-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    
-}
-
-.contact-title,
-.brands-title,
-.info-title,
-.customer-service-title,
-.follow-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px; 
-    text-align: center;
-}
-
-
-.brands-text,
-.info-text,
-.customer-service-text {
-    font-size: 14px;
-    font-weight: 400;
-    align-items: flex-start;
-    
-}
-.email-info,
-.phone-info {
-  display: flex;
-  align-items: flex-start; 
-}
-
-.email-icon,
-.phone-icon {
-  margin-right: 10px; 
-}
-
-/* Redes sociales */
-.social-icons img {
-  width: 30px; 
-  margin-right: 10px; 
-}
-/* Media query para pantallas con un ancho max de dispositivos moviles */
-@media (max-width: 600px) {
-  .footer {
-    flex-direction: column; 
-    align-items: center;
-  }
-
-  .contact-container,
-  .brands-container,
-  .info-container,
-  .customer-service-container,
-  .follow-container {
-    align-items: center; 
-    text-align: center;
+    font-size: 0.8em;
   }
 }
