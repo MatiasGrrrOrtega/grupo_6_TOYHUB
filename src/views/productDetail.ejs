@@ -14,27 +14,25 @@
 
   <%- include('./partials/header.ejs') %> 
 
-  <main class="main-product-detail">
+  <main class="main main-product-detail">
     <section class="product-detail-container">
       <div class="presentation-images">
         <figure>
-          <img src="images/products/p2.webp" alt="producto1" />
+          <img src="/images/products/<%= product.img %>" alt="producto1" />
         </figure>
         <div class="miniature-images">
-          <img src="images/products/perpetivas-pou/perspectiva1.webp" alt="producto1" />
-          <img src="images/products/perpetivas-pou/perspectiva2.webp" alt="producto2" />
-          <img src="images/products/perpetivas-pou/perspectiva3.webp" alt="producto3" />
-          <img src="images/products/perpetivas-pou/product-pou-material.webp" alt="producto4" />
+          <img src="/images/products/<%= product.img %>" alt="producto1" />
+          <img src="/images/products/<%= product.img %>" alt="producto2" />
+          <img src="/images/products/<%= product.img %>" alt="producto3" />
+          <img src="/images/products/<%= product.img %>" alt="producto4" />
         </div>
       </div>
       <div class="product-detail">
         <div class="product-detail-top">
-          <h2>Peluche Pou</h2>
+          <h2><%= product.name %></h2>
           <h3>Descripcion</h3>
           <p class="description">
-            Pou-muñeco de peluche de 22cm/8,6 pulgadas, juguete de Alien de
-            dibujos animados, Kawaii, figura de juego caliente, regalos para
-            fanáticos.
+            <%= product.description %>
           </p>
         </div>
         <div class="product-detail-bottom">
@@ -49,8 +47,8 @@
               </button>
             </div>
             <div class="product-price">
-              <p>$818.91</p>
-              <p>en 2 cuotas de $407,95</p>
+              <p>$<%= product.price %></p>
+              <p>en <%= product.share %> cuotas de $<%= product.dues %></p>
             </div>
           </div>
           <div class="product-detail-buttons">
@@ -67,84 +65,29 @@
     <section class="similar-products-container">
       <h2>Quizas te interesen estos productos</h2>
       <div class="similar-products">
-        <div class="product">
-          <a class="product-link" href="#">
-            <img src="images/products/peluche-de-mickey-y-minnie.webp" alt="imagen de peluche de Mickey y Minnie" />
-            <div class="product-info">
-              <h3 class="name">Peluches de Mickey y Minnie</h3>
-              <p class="price"><strong>ARS</strong>$3.807,88</p>
-              <p class="dues">3 cuotas de $1.269,29</p>
-            </div>
-            <div class="product-button">
-              <button class="add">
-                AÑADIR AL CARRO
-                <i class="fa-solid fa-cart-shopping fa-xl"></i>
-              </button>
-              <button class="buy">
-                COMPRAR <i class="fa-solid fa-basket-shopping fa-xl"></i>
-              </button>
-            </div>
-          </a>
-        </div>
-        <div class="product">
-          <a class="product-link" href="#">
-            <img src="images/products/Sanrio-Cinnamoroll-mu-eco-de-peluche-de-gran-tama-o-para-ni-os-y-ni-as.jpg_.webp"
-              alt="imagen de Sanrio Cinnamoroll-muñeco de peluche de gran tamaño para niños y niñas" />
-            <div class="product-info">
-              <h3 class="name">Sanrio Cinnamoroll-muñeco de peluche</h3>
-              <p class="price"><strong>ARS</strong>$9,334.65</p>
-              <p class="dues">4 cuotas de $2.333,66</p>
-            </div>
-            <div class="product-button">
-              <button class="add">
-                AÑADIR AL CARRO
-                <i class="fa-solid fa-cart-shopping fa-xl"></i>
-              </button>
-              <button class="buy">
-                COMPRAR <i class="fa-solid fa-basket-shopping fa-xl"></i>
-              </button>
-            </div>
-          </a>
-        </div>
-        <div class="product">
-          <a class="product-link" href="#">
-            <img src="images/products/p1.webp" alt="imagen de peluche de Sullivan - Disney" />
-            <div class="product-info">
-              <h3 class="name">Peluche de Sullivan - Disney</h3>
-              <p class="price"><strong>ARS</strong>$8,358.63</p>
-              <p class="dues">4 cuotas de $1.393,10</p>
-            </div>
-            <div class="product-button">
-              <button class="add">
-                AÑADIR AL CARRO
-                <i class="fa-solid fa-cart-shopping fa-xl"></i>
-              </button>
-              <button class="buy">
-                COMPRAR <i class="fa-solid fa-basket-shopping fa-xl"></i>
-              </button>
-            </div>
-          </a>
-        </div>
-        <div class="product">
-          <a class="product-link" href="#">
-            <img src="images/products/Trajes-de-mu-ecas-de-43-cm-para-mu-ecas-de-17-pulgadas-mono-de-mono.jpg_.webp"
-              alt="imagen de Trajes de muñecas de 43 cm para muñecas de 17 pulgadas mono de mono" />
-            <div class="product-info">
-              <h3 class="name">Muñeca vestida de Stitch</h3>
-              <p class="price"><strong>ARS</strong>$1,630.75</p>
-              <p class="dues">2 cuotas de $815,37</p>
-            </div>
-            <div class="product-button">
-              <button class="add">
-                AÑADIR AL CARRO
-                <i class="fa-solid fa-cart-shopping fa-xl"></i>
-              </button>
-              <button class="buy">
-                COMPRAR <i class="fa-solid fa-basket-shopping fa-xl"></i>
-              </button>
-            </div>
-          </a>
-        </div>
+        <% productsRecommended.map((product)=>{ %>
+          <% if(product.id-1 > 4){ %>
+                <% return %>
+          <% }else{ %>
+                <a class="product" href="/product/productDetail/<%=product.id%>">
+                  <img
+                    src="/images/products/<%=product.img%>"
+                    alt="<%= product.name %>"
+                  />
+                  <div class="product-bottom">
+                    <div class="product-info">
+                      <h3 class="name"><%= product.name %></h3>
+                      <p class="price"><strong>ARS</strong>$<%= product.price %></p>
+                      <p class="dues"><%= product.share %> cuotas de $<%= product.dues %></p>
+                    </div>
+                    <div class="product-button">
+                      <button class="add">AÑADIR AL CARRO <i class="fa-solid fa-cart-shopping fa-xl"></i></button>
+                      <button class="buy">COMPRAR <i class="fa-solid fa-basket-shopping fa-xl"></i></button>
+                    </div>
+                  </div>
+                </a>
+          <% } %>
+        <% }) %>
       </div>
     </section>
   </main>

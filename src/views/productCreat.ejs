@@ -5,18 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="/styles/home.css" />
-  <link rel="stylesheet" href="/styles/productCreatEdit.css" />
+  <link rel="stylesheet" href="/styles/general.css" />
+  <link rel="stylesheet" href="/styles/productCreat.css" />
   <title>ToyHub</title>
 </head>
 
 <body>
     <%- include('./partials/header.ejs') %>
     <main class='main main-product'>
-      <a href='/'>Volvel al inicio</a>
+      <a class='back-button' href='/'> <-Volvel al inicio</a>
       <section class='product-add-container'>
-        <h1 class='product-add-title'>Añadir Producto</h1>
         <form action='/user/productCreat' method='POST' enctype='multipart/form-data'>
+          <h1 class='product-add-title'>Añadir Producto</h1>
           <div class='product-add-form-group'>
             <label for='name'>Nombre</label>
             <input type='text' id='name' name='name' class='form-control' required />
@@ -56,15 +56,31 @@
           <div class='product-add-form-actions'>
             <button type='submit' class='btn btn-primary'>Guardar</button>
             <button type='reset' class='btn btn-primary'>Cancelar</button>
-            <a href='/'>Volvel a inicio</a>
           </div>
         </form>
       </section>
       <section class='product-edit-container'>
-        <h1 class='product-edit-title'>Editar Productos</h1>
-        <% products.map((product)=>{ %>
-          Editar: <a href='/user/productEdit/<%= product.id %>'> <%= product.name %> </a>
-        <% }) %>
+        <div class='product-edit-list'>
+          <h1 class='product-add-title'>Editar Productos</h1>
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Categoria</th>
+              <th>Link</th>
+              <th>Marca</th>
+            </tr>
+            <% products.map((product)=>{ %>
+              <tr>
+                <td><%= product.id %></td>
+                <td><%= product.name %></td>
+                <td><%= product.category %></td>
+                <td><a href='/user/productEdit/<%= product.id %>'>Editar</a></td>
+                <td><%= product.brand %></td>
+              </tr>  
+            <% }) %>
+          </table>
+        </div>
       </section>
     </main>
     <%- include('./partials/footer.ejs') %>
