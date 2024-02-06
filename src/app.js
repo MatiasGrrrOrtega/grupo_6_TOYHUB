@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path')
-const bodyParser = require('body-parser')
 
 app.use(express.static('public'))
 // Indicamos el motor de plantilla
@@ -11,7 +10,6 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/views'))
 app.use(express.json())
 
-app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 const home = require('./routes/home')

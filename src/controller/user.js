@@ -30,7 +30,6 @@ class userController {
 
   static adminEditProduct(req, res) {
     const { id } = req.params
-    const product = data.products.find((product) => product.id == id)
     const { name, price, share, img, category, stock, brand, description } =
       req.body
     data.products[id - 1].name = name
