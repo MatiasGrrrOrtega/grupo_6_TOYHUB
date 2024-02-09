@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/general.css" />
     
     <title>ToyHub</title>
   </head>
   <body>
     <%- include('./partials/header.ejs')  %>
   <!-- Seccion del MAIN -->
-    <main class="main-home">
+  <% if (usuario[0].role == 'admin'){ %> 
+    <a class='admin-button' href="/user/productCreat">Crear y Editar productos</a>
+  <% } %>
+    <main class="main main-home">
       <section class="slider-container">
         <ul class="slider">
           <li id="slide1">
@@ -79,12 +83,12 @@
         <h2 class="title">Te van a encantar</h2>
         <div class="products-list">
           <% products.map((product)=>{ %>
-            <div class="product">
-              <a class="product-link" href="#">
-                <img
-                  src="/images/products/<%=product.img%>"
-                  alt="imagen de peluche de Mickey y Minnie"
-                />
+            <a class="product" href="/product/productDetail/<%=product.id%>">
+              <img
+                src="/images/products/<%=product.img%>"
+                alt="<%= product.name %>"
+              />
+              <div class="product-bottom">
                 <div class="product-info">
                   <h3 class="name"><%= product.name %></h3>
                   <p class="price"><strong>ARS</strong>$<%= product.price %></p>
@@ -94,10 +98,9 @@
                   <button class="add">AÑADIR AL CARRO <i class="fa-solid fa-cart-shopping fa-xl"></i></button>
                   <button class="buy">COMPRAR <i class="fa-solid fa-basket-shopping fa-xl"></i></button>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
           <% }) %>
-          
         </div>
         <button class="view-more-button">VER MAS</button>
       </section>

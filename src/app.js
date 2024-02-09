@@ -8,47 +8,21 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 //Direccionamos a las vistas
 app.set('views', path.join(__dirname, '/views'))
+app.use(express.json())
+
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 const home = require('./routes/home')
 const user = require('./routes/user')
+const product = require('./routes/products')
+
 app.use('/', home)
 app.use('/user', user)
+app.use('/product', product)
 
-
-app.get('/login', (req, res) => {
-  res.render('login');  
-}); 
-
-app.get('/register', (req, res) => {
-  res.render('register');  
-});  
-
-app.get('/productCart', (req, res) => {
-  res.render('productCart');  
-});  
-
-app.get('/productDetail', (req, res) => {
-  res.render('productDetail');  
-});  
-// app.get('/productDetail', (req, res) => {
-//   const filePath = path.join(__dirname, '/views/productDetail.html')
-//   res.sendFile(filePath)
-// })
-
-// app.get('/productCart', (req, res) => {
-//   const filePath = path.join(__dirname, '/views/productCart.html')
-//   res.sendFile(filePath)
-// })
-
-// app.get('/register', (req, res) => {
-//   const filePath = path.join(__dirname, '/views/register.html')
-//   res.sendFile(filePath)
-// })
-
-//app.get('/login', (req, res) => {
-//const filePath = path.join(__dirname, '/views/login.html')
-//res.sendFile(filePath)
-//})
+app.use((req, res) => {
+  res.status(404).send('404 Not Found')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
