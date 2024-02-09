@@ -13,7 +13,7 @@
     <%- include('./partials/header.ejs')  %>
   <!-- Seccion del MAIN -->
   <% if (usuario[0].role == 'admin'){ %> 
-    <a class='admin-button' href="/user/productCreat">Crear y Editar productos</a>
+    <a class='admin-button' href="/products/create">Crear y Editar productos</a>
   <% } %>
     <main class="main main-home">
       <section class="slider-container">
@@ -83,7 +83,7 @@
         <h2 class="title">Te van a encantar</h2>
         <div class="products-list">
           <% products.map((product)=>{ %>
-            <a class="product" href="/product/productDetail/<%=product.id%>">
+            <a class="product" href="/products/<%=product.id%>">
               <img
                 src="/images/products/<%=product.img%>"
                 alt="<%= product.name %>"
