@@ -30,11 +30,6 @@ header, main, footer{
   margin: auto;
 }
 
-/* Logo */
-.logo-container img {
-  max-width: 20%;
-  border: 1px solid black;
-}
 
 .main-header {
   background-color: #FF3232;
@@ -42,6 +37,12 @@ header, main, footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Logo */
+.logo-container img {
+  max-width: 20%;
+  border: 1px solid black;
 }
 
 /* Ajustes para el menú desplegable */
