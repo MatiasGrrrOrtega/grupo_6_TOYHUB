@@ -13,11 +13,11 @@ app.use(methodOverride('_method')) // for put and delete methods
 
 const home = require('./routes/home')
 const user = require('./routes/user')
-const product = require('./routes/products')
+const products = require('./routes/products')
 
 app.use('/', home)
 app.use('/user', user)
-app.use('/product', product)
+app.use('/products', products)
 
 app.use((req, res) => {
   res.status(404).send('404 Not Found')
