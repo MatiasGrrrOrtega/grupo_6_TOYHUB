@@ -14,6 +14,7 @@
     <%- include('./partials/header.ejs') %>
     <main class='main main-product'>
       <a class='back-button' href='/'><- Volvel al inicio</a>
+      
       <section class='product-edit-container'>
         <div class='product-edit-card'>
           <form action='/products/<%= product.id  %>?_method=PUT' method='POST'>
@@ -47,9 +48,9 @@
             <div class='product-edit-form-group'>
               <label for='category'>Categoría</label>
               <select id='category' name='category' required>
-                <option value='1' <%= product.category == 1 ? 'selected' : '' %>>Juguetes</option>
-                <option value='2' <%= product.category == 2 ? 'selected' : '' %>>Juegos de mesa</option>
-                <option value='3' <%= product.category == 3 ? 'selected' : '' %>>Libros</option>
+                <option value='1' <%= product.category == 1 ? 'selected' : '' %>>Peluche</option>
+                <option value='2' <%= product.category == 2 ? 'selected' : '' %>>Figura de accion</option>
+                <option value='3' <%= product.category == 3 ? 'selected' : '' %>>Muñeca/o</option>
               </select>
             </div>
             <div class='product-edit-form-group'>
@@ -59,7 +60,7 @@
 
             <div class='product-edit-form-actions'>
               <button type='submit' class='btn btn-primary'>Guardar</button>
-              <button type='reset' class='btn btn-primary'>Cancelar</button>
+              <button type='reset' class='btn btn-primary'><a href='/products/create'>Cancelar</a></button>
             </div>
           </form>
         </div>

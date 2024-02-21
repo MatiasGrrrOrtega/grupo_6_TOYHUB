@@ -12,10 +12,10 @@
 
 <body>
     <%- include('./partials/header.ejs') %>
+    <a class='back-button' href='/'> <-Volvel al inicio</a>
     <main class='main main-product'>
-      <a class='back-button' href='/'> <-Volvel al inicio</a>
       <section class='product-add-container'>
-        <form action='/products' method='POST'>
+        <form class="form-create" action='/products' method='POST'>
           <h1 class='product-add-title'>Añadir Producto</h1>
           <div class='product-add-form-group'>
             <label for='name'>Nombre</label>
@@ -55,7 +55,7 @@
           </div>
           <div class='product-add-form-actions'>
             <button type='submit' class='btn btn-primary'>Guardar</button>
-            <button type='reset' class='btn btn-primary'>Cancelar</button>
+            <button type='reset' class='btn btn-primary'><a href='/'>Cancelar</a></button>
           </div>
         </form>
       </section>
@@ -75,7 +75,12 @@
                 <td><%= product.id %></td>
                 <td><%= product.name %></td>
                 <td><%= product.category %></td>
-                <td><a href='/products/<%= product.id %>/edit'>Editar</a></td>
+                <td>
+                  <a class="button" href='/products/<%= product.id %>/edit'>Editar</a>
+                  <form class="form-delete" action='/products/<%= product.id %>?_method=DELETE' method='POST'>
+                    <input class="button" type="submit" value="Eliminar">
+                  </form>
+                </td>
                 <td><%= product.brand %></td>
               </tr>  
             <% }) %>
