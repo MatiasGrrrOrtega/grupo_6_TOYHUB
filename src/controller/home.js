@@ -1,11 +1,11 @@
-const data = require('../data/products')
+const dataProducts = require('../data/products')
 const dataMarcas = require('../data/marcas')
 const USERS = require('../data/users')
 
 class homeController {
   static renderHome(req, res) {
     res.render('home', {
-      products: data.products,
+      products: dataProducts,
       marcas: dataMarcas.marcas,
       usuario: USERS.users,
     })

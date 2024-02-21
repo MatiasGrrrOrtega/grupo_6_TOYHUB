@@ -294,6 +294,11 @@
     font-size: 1.3em;
   }
 
+  .products-list {
+    width: 90%;
+    justify-content: flex-start;
+  }
+
   .products-container .view-more-button {
     width: 300px;
   }
@@ -314,9 +319,12 @@
     width: 10px;
     height: 10px;
   }
+
   .products-list {
-    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
   }
+  
   .products-list .product {
     width: 240px;
   }

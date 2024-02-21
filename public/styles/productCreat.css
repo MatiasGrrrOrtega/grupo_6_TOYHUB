@@ -8,8 +8,9 @@
 .back-button{
   display: block;
   width: 140px;
+  text-align: center;
   text-decoration: none;
-  margin: 12px 5px;
+  margin: 12px auto;
   padding: 5px;
   background-color: #22cc49;
   border: none;
@@ -32,7 +33,7 @@
   width: 90%;
 }
 
-form{
+.form-create{
   background-color: var(--color-light-50);
   padding: 15px;
   width: 90%;
@@ -44,12 +45,12 @@ form{
   justify-content: center;
 }
 
-form h1{
+.form-create h1{
   margin-bottom: 15px;
   color: var(--color-blue-dark-950);
 }
 
-form .product-add-form-group{
+.form-create .product-add-form-group{
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -57,12 +58,12 @@ form .product-add-form-group{
   width: 100%;
 }
 
-form .product-add-form-group label{
+.form-create .product-add-form-group label{
   margin-bottom: 5px;
   color: var(--color-blue-dark-950);
 }
 
-form .product-add-form-group input{
+.form-create .product-add-form-group input{
   width: 100%;
   padding: 8px;
   margin-bottom: 6px;
@@ -72,7 +73,7 @@ form .product-add-form-group input{
   outline: none;
 }
 
-form .product-add-form-group select{
+.form-create .product-add-form-group select{
   width: 100%;
   padding: 8px;
   margin-bottom: 6px;
@@ -82,7 +83,7 @@ form .product-add-form-group select{
   outline: none;
 }
 
-form .product-add-form-group textarea{
+.form-create .product-add-form-group textarea{
   width: 100%;
   padding: 8px;
   margin-bottom: 6px;
@@ -93,7 +94,7 @@ form .product-add-form-group textarea{
   resize: none;
 }
 
-form .product-add-form-actions button{
+.form-create .product-add-form-actions button{
   width: 120px;
   padding: 10px;
   margin: 5px 0;
@@ -108,10 +109,18 @@ form .product-add-form-actions button{
   cursor: pointer;
   transition: background-color ease .3s;
 
+  & a{
+    text-decoration: none;
+    color: var(--color-white);
+  }
+
   &:hover{
     background-color: var(--color-red-500);
     color: var(--color-red-600);
     outline:1px solid var(--color-red-600);
+    & a{
+      color: var(--color-red-600);
+    }
   }
 }
 .product-edit-container{
@@ -120,7 +129,9 @@ form .product-add-form-actions button{
   align-items: center;
   justify-content: center;
   width: 100%;
+  text-align: center;
 }
+
 .product-edit-container .product-edit-list{
   display: flex;
   flex-direction: column;
@@ -136,6 +147,7 @@ form .product-add-form-actions button{
 .product-edit-container .product-edit-list table{
   width: 100%;
   border-collapse: collapse;
+  text-align: center;
 }
 
 .product-edit-container .product-edit-list table th{
@@ -143,23 +155,27 @@ form .product-add-form-actions button{
   color: var(--color-light-50);
 }
 
-.product-edit-container .product-edit-list a{
+.product-edit-container .product-edit-list .button{
+  display: block;
+  width: 50px;
+  border: none;
   background-color: var(--color-blue-dark-950);
   text-decoration: none;
   color: var(--color-light-50);
   transition: background-color ease .3s;
+  cursor: pointer;
 }
 
-.product-edit-container .product-edit-list a:hover{
+.product-edit-container .product-edit-list .button:hover{
   background-color: var(--color-light-50);
   color: var(--color-blue-dark-950);
 }
 
 @media (min-width: 768px){
-
-  .product-detail-container{
-    width: 70%;
+  .main-product{
+    flex-direction: column-reverse;
   }
+
   .product-edit-container .product-edit-list{
     width: 80%;
   }
@@ -171,10 +187,17 @@ form .product-add-form-actions button{
 
 @media (min-width: 1024px){
 
-  .product-detail-container{
+  .main-product{
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 20px auto;
+  }
+
+  .main-product section{
     width: 50%;
   }
-  .product-edit-container .product-edit-list{
-    width: 60%;
+
+  .product-detail-container{
+    width: 50%;
   }
 }
