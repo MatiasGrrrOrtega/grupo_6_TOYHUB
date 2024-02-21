@@ -19,9 +19,9 @@ app.use('/', home)
 app.use('/user', user)
 app.use('/products', products)
 
-app.use((req, res) => {
-  res.status(404).send('404 Not Found')
-})
+// app.use((req, res) => {
+//   res.status(404).send('404 Not Found')
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
