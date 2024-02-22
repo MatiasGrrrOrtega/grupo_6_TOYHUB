@@ -1,108 +1,3 @@
-:root {
-  --color-principal: #fa5f49;
-  --color-secundario: #f9a59a;
-  --color-terciario: #ff3232;
-  --color-cuarto: #f9d99a;
-  --color-quinto: #add5fa;
-}
-
-
-/*----------SECCION DEL HEADER----------*/
-
-
-/* Logo */
-.logo-container img {
-  max-width: 20%;
-  border: 1px solid black;
-}
-
-.main-header {
-  background-color: #FF3232;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Ajustes para el menú desplegable */
-.logo-container,
-.menu-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.menu-btn {
-  font-size: 1.5em;
-  color: #FFF3F1;
-  background-color: #FF3232;
-  border: none;
-}
-
-/* Estilos para el contenido del menú desplegable */
-.menu-content {
-  display: none;
-  background-color: #FF3232;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-.menu-content a {
-  padding: 12px;
-  display: block;
-  text-decoration: none;
-  color: #FFF3F1;
-}
-
-/* Estilos para la barra de búsqueda */
-.search-container {
-  text-align: center;
-  width: 40%; /* Ajusta según tus necesidades */
-}
-
-.search-bar {
-  position: relative;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100px;
-  overflow: hidden;
-  
-}
-
-.search-input {
-  flex: 1;
-  padding: 0.7rem;
-  font-size: 1.2rem;
-  border: none;
-  outline: none;
-  background-color: #FFF3F1;
-}
-
-.search-button {
-  position: absolute;
-  right: 0;
-  padding: 0.7rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border: none;
-}
-
-/* Icono de usuario - Mi cuenta y Carrito - Mi carrito */
-.user-cart-container {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.user-cart-container a {
-  color: #FFF3F1;
-  font-size: 1.5em;
-}
- 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -119,7 +14,7 @@
 }
 
 section {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: auto;
 }
 

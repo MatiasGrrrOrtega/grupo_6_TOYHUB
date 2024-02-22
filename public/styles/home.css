@@ -152,75 +152,71 @@
   min-height: 370px;
   padding: 8px;
   background-color: var(--color-white);
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
   text-decoration: none;
-}
 
-.products-list .product img {
-  align-self: center;
-  max-width: 100%;
-  min-height: 80px;
-  max-height: 250px;
-  border-radius: 8px;
-}
+  & img {
+    align-self: center;
+    max-width: 100%;
+    min-height: 80px;
+    max-height: 230px;
+    border-radius: 12px;
+  }
 
-.products-list .product .product-info .name{
-  font-size: 0.8em;
-  color: var(--color-blue-dark-950);
-}
+  & .product-name {
+    font-size: 0.8em;
+    color: var(--color-blue-dark-950);
+  }
 
-.products-list .product .product-info .price{
-  font-size: 1.2em;
-  color: var(--color-red-600);
-}
+  & .product-price{
+    font-size: 1.2em;
+    color: var(--color-red-600);
+  }
 
-.products-list .product .product-info .dues{
-  font-size: 0.8em;
-  color: var(--color-lightblue-500);
-}
+  & .product-dues{
+    font-size: 0.8em;
+    color: var(--color-lightblue-500);
+  }
 
-.products-list .product .product-button{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-}
+  & .product-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    color: var(--color-light-50);
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color ease 0.3s;
+  }
 
-.products-list .product .product-button button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  border: none;
-  border-radius: 8px;
-  color: var(--color-light-50);
-  font-size: 0.8em;
-  cursor: pointer;
-  transition: background-color ease 0.3s;
-}
+  & .add{
+    justify-self: end;
+    background-color: var(--color-lightblue-500);
+    
+    &:hover{
+      background-color: #2e4fc7;
+    }
+  }
 
-.products-list .product .product-button button.add{
-  background-color: var(--color-lightblue-500);
-}
+  & .buy{
+    justify-self: end;
+    background-color: var(--color-blue-dark-950);
+    
+    &:hover{
+      background-color: var(--color-text-light-50);
+      color: var(--color-blue-dark-950);
+      outline: 1px solid var(--color-blue-dark-950);
+    }
+  }
 
-.products-list .product .product-button button.add:hover{
-  background-color: #2e4fc7;
-}
-
-.products-list .product .product-button button.buy{
-  background-color: var(--color-blue-dark-950);
-}
-
-.products-list .product .product-button button.buy:hover{
-  background-color: var(--color-text-light-50);
-  color: var(--color-blue-dark-950);
-  outline: 1px solid var(--color-blue-dark-950);
 }
 
 .products-container .view-more-button {
