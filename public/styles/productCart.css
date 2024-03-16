@@ -1,4 +1,4 @@
-.container {
+.container-product {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -39,7 +39,7 @@ section {
   width: 100%;
 }
 
-.container {
+.container-product {
   background-color: var(--color-white);
   margin: 8px;
   padding: 8px;
@@ -198,7 +198,7 @@ section {
     gap: 0px 0px;
   }
 
-  .container {
+  .container-product {
     width: 90%;
     margin: auto;
   }
@@ -233,91 +233,4 @@ section {
 }
 .eliminar-del-carrito- {
   grid-area: 6 / 1 / 7 / 2;
-}
-
-
-
-
-/*----------SECCION DEL FOOTER----------*/
-.footer {
-  width: 100%;
-  background: #1B2150;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 20px 0; 
-}
-
-/* Estilos compartidos para los elementos de texto */
-.footer div {
-  color: white;
-  font-family: 'Comic Sans MS', sans-serif;
-  word-wrap: break-word;
-}
-
-
-.contact-container,
-.brands-container,
-.info-container,
-.customer-service-container,
-.follow-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    
-}
-
-.contact-title,
-.brands-title,
-.info-title,
-.customer-service-title,
-.follow-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px; 
-    text-align: center;
-}
-
-
-.brands-text,
-.info-text,
-.customer-service-text {
-    font-size: 14px;
-    font-weight: 400;
-    align-items: flex-start;
-    
-}
-.email-info,
-.phone-info {
-  display: flex;
-  align-items: flex-start; 
-}
-
-.email-icon,
-.phone-icon {
-  margin-right: 10px; 
-}
-
-/* Redes sociales */
-.social-icons img {
-  width: 30px; 
-  margin-right: 10px; 
-}
-/* Media query para pantallas con un ancho max de dispositivos moviles */
-@media (max-width: 600px) {
-  .footer {
-    flex-direction: column; 
-    align-items: center;
-  }
-
-  .contact-container,
-  .brands-container,
-  .info-container,
-  .customer-service-container,
-  .follow-container {
-    align-items: center; 
-    text-align: center;
-  }
 }

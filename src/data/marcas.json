@@ -2,30 +2,37 @@
   "marcas":[
     {
       "id":1,
+      "name": "SEGA",
       "img": "logo-sega.svg"
     },
     {
       "id":2,
+      "name": "BANDAI",
       "img": "logo-bandai.svg"
     },
     {
       "id":3,
+      "name": "BANPRESTO",
       "img": "logo-banpresto.svg"
     },
     {
       "id":4,
+      "name": "DISNEY",
       "img": "logo-disney.svg"
     },
     {
       "id":5,
+      "name": "HASBRO",
       "img": "logo-hasbro.svg"
     },
     {
       "id":6,
+      "name": "MARVEL",
       "img": "logo-marvel.svg"
     },
     {
       "id":7,
+      "name": "MEGAHOUSE",
       "img": "logo-megaHouse.svg"
     }
   ]

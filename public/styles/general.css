@@ -26,9 +26,10 @@ body{
   background-color: var(--color-background);
 }
 
-header, main, footer{
+main{
   max-width: 1200px;
   margin: auto;
+  padding-top: 60px;
 }
 
 
@@ -38,6 +39,9 @@ header, main, footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
 /* Logo */
@@ -207,102 +211,76 @@ header, main, footer{
 /*----------SECCION DEL FOOTER----------*/
 .footer {
   width: 100%;
-  background: #1B2150;
+  background: var(--color-blue-dark-950);
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 20px 0; 
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 12px; 
   gap: 10px;
-  padding: 12px;
-}
+  color: var(--color-light-50);
+  font-size: 1em;
 
-/* Estilos compartidos para los elementos de texto */
-.footer div {
-  color: white;
-  font-family: 'Comic Sans MS', sans-serif;
-  word-wrap: break-word;
-}
-
-
-.contact-container,
-.brands-container,
-.info-container,
-.customer-service-container,
-.follow-container {
+  & .footer-top,
+  & .footer-bottom {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    
-}
-
-.contact-title,
-.brands-title,
-.info-title,
-.customer-service-title,
-.follow-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px; 
-    text-align: center;
-}
-
-
-.brands-text,
-.info-text,
-.customer-service-text {
-    font-size: 14px;
-    font-weight: 400;
-    align-items: flex-start;
-    
-}
-.email-info,
-.phone-info {
-  display: flex;
-  align-items: flex-start;
-  font-size: 14px;
-}
-
-.email-icon,
-.phone-icon {
-  margin-right: 10px; 
-}
-
-/* Redes sociales */
-
-.social-icons{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-}
-.social-icons img {
-  width: 30px; 
-}
-/* Media query para pantallas con un ancho max de dispositivos moviles */
-@media (max-width: 600px) {
-  .footer {
-    flex-direction: column; 
+    justify-content: space-between;
     align-items: center;
+    gap: 20px;
+
+    & .container{
+      text-align: center;
+
+      & .title{
+        font-size: 1.15em;
+      }
+
+      & .list{
+        font-size: 1em;
+        font-weight: lighter;
+        list-style: none;
+      }
+
+      & .contact-list li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img{
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    & .follow-icons-container{
+      margin-top: 20px;
+
+      & img{
+        width: 24px;
+        height: 24px;
+        transition: 0.3s;
+        cursor: pointer;
+  
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    & .footer-copyright p{
+      font-size: 1em;
+      font-family: sans-serif;
+    }
   }
-
-  .contact-container,
-  .brands-container,
-  .info-container,
-  .customer-service-container,
-  .follow-container {
-    align-items: center; 
-    text-align: center;
-  }
-}
-
-@media (min-width: 768px){
-
 }
 
 @media (min-width: 1024px){
+  main{
+    padding-top: 80px;
+  }
+
   .menu-container{
     display: none;
   }
@@ -319,6 +297,25 @@ header, main, footer{
       &:hover{
         background-color: var(--color-red-600);
         color: var(--color-white);
+      }
+    }
+  }
+  .footer{
+    & .footer-top{
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: start;
+      
+      & .container{
+        text-align: left;
+
+        & .title{
+          text-align:left;
+        }
+  
+        & .contact-list li{
+          justify-content: flex-start;
+        }
       }
     }
   }

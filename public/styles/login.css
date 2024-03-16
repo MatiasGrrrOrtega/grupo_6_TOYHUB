@@ -10,7 +10,7 @@
   font-size: 1.5em;
 }
 
-form{
+.form-login{
   background-color: var(--color-light-50);
   padding: 15px;
   width: 90%;
@@ -22,12 +22,12 @@ form{
   justify-content: center;
 }
 
-form h1{
+.form-login h1{
   margin-bottom: 15px;
   color: var(--color-blue-dark-950);
 }
 
-form input[type="submit"]{
+.form-login input[type="submit"]{
   width: 120px;
   padding: 10px;
   margin: 5px 0;
@@ -41,20 +41,20 @@ form input[type="submit"]{
   font-weight: bold;
   cursor: pointer;
   transition: background-color ease .3s;
+
+  &:hover{
+    background-color: var(--color-red-dark-950);
+  }
 }
 
-form input[type="submit"]:hover{
-  background-color: var(--color-red-dark-950);
-}
-
-.form-register{
+.form-login .form-login-groups{
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.form-register .form-group{
+.form-login .form-login-groups .form-group{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@ form input[type="submit"]:hover{
   margin: 5px 0;
 }
 
-.form-register .form-group input{
+.form-login .form-login-groups .form-group input{
   width: 100%;
   padding: 10px;
   margin: 5px 0;
@@ -75,11 +75,11 @@ form input[type="submit"]:hover{
   outline: none;
 }
 
-.form-register .form-group input:focus{
+.form-login .form-login-groups .form-group input:focus{
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
 }
 
-.form-register .form-group label{
+.form-login .form-login-groups .form-group label{
   position: absolute;
   top: 0;
   left: 0;
@@ -90,7 +90,7 @@ form input[type="submit"]:hover{
   transition: top ease .3s, left ease .3s, padding ease .3s, margin ease .3s, font-size ease .3s, background-color ease .3s, color ease .3s;
 }
 
-.form-register .form-group input:focus + label{
+.form-login .form-login-groups .form-group input:focus + label{
   top: -10px;
   left: -10px;
   padding: 5px;
@@ -101,7 +101,7 @@ form input[type="submit"]:hover{
   border-radius: 8px;
 }
 
-.form-register .form-group input:valid + label{
+.form-login .form-login-groups .form-group input:valid + label{
   top: -10px;
   left: -10px;
   padding: 5px;
@@ -112,11 +112,11 @@ form input[type="submit"]:hover{
   border-radius: 8px;
 }
 
-.form-register .form-group input:valid{
+.form-login .form-login-groups .form-group input:valid{
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
 }
 
-form .form-help{
+.form-login .form-help{
   width: 100%;
   margin: 12px 0;
   font-weight: bold;
@@ -125,23 +125,23 @@ form .form-help{
   font-size: 0.9em;
 }	
 
-form .form-help a{
+.form-login .form-help .recover-password{
   color: var(--color-lightblue-500);
   text-decoration: underline;
   transition: color ease .3s;
   font-size: 0.9em;
 }
 
-form .form-help a:hover{
+.form-login .form-help .recover-password:hover{
   color: var(--color-red-600);
 }
 
-form .form-help label{
+.form-login .form-help label{
   color: var(--color-blue-dark-950);
   font-size: 0.9em;
 }
 
-form .buttons-login-option{
+.form-login .buttons-login-option{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -149,7 +149,7 @@ form .buttons-login-option{
   margin: 12px 0;
 }
 
-form .buttons-login-option a{
+.form-login .buttons-login-option a{
   width: 100%;
   padding: 10px;
   margin: 5px 0;
@@ -166,16 +166,16 @@ form .buttons-login-option a{
   text-align: center;
 }
 
-form .buttons-login-option a:hover{
+.form-login .buttons-login-option a:hover{
   background-color: var(--color-lightblue-500);
   color: var(--color-white);
 }
 
-form input[type="submit"]{
+.form-login input[type="submit"]{
   font-size: 0.8em;
 }
 
-.register{
+.dont-have-account{
   width: 90%;
   display: flex;
   padding: 15px;
@@ -186,12 +186,12 @@ form input[type="submit"]{
   border-radius: 8px;
 }
 
-.register p{
-  font-size: 0.8em;
+.dont-have-account p{
+  font-size: 0.9em;
   color: var(--color-blue-dark-950);
 }
 
-.register a{
+.dont-have-account a{
   background-color: var(--color-blue-dark-950);
   color: var(--color-light-50);
   padding: 8px;
@@ -202,7 +202,7 @@ form input[type="submit"]{
   text-align: center;
 }
 
-.register a:hover{
+.dont-have-account a:hover{
   background-color: var(--color-lightblue-500);
 }
 
@@ -211,24 +211,24 @@ form input[type="submit"]{
     height: 100vh;
   }
 
-  form{
+  .form-login{
     width: 60%;
   }
 
-  form h1{
+  .form-login h1{
     font-size: 1.5em;
   }
 
-  form input[type="submit"]{
+  .form-login input[type="submit"]{
     width: 150px;
     font-size: 1.2em;
   }
 
-  .register{
+  .form-login{
     width: 60%;
   }
 
-  .register a{
+  .form-login a{
     padding: 15px;
   }
 }
@@ -238,44 +238,44 @@ form input[type="submit"]{
     height: 100vh;
   }
 
-  form{
+  .form-login{
     width: 70%;
   }
 
-  form h1{
+  .form-login h1{
     font-size: 2em;
   }
 
-  form input[type="submit"]{
+  .form-login input[type="submit"]{
     width: 150px;
     font-size: 1em;
   }
 
-  form .form-help{
+  .form-login .form-help{
     font-size: 1em;
   }
 
-  form .buttons-login-option a{
+  .form-login .buttons-login-option a{
     font-size: 1em;
   }
 
-  .register{
+  .form-login{
     width: 70%;
   }
 
-  form .form-register .form-group label{
+  .form-login .form-login-groups .form-group label{
     font-size: 0.9em;
   }
 
-  form .form-register .form-group input{
+  .form-login .form-login-groups .form-group input{
     font-size: 1em;
   }
 
-  form .form-register .form-group input:focus + label{
+  .form-login .form-login-groups .form-group input:focus + label{
     font-size: 0.8em;
   }
 
-  form .form-register .form-group input:valid + label{
+  .form-login .form-login-groups .form-group input:valid + label{
     font-size: 0.8em;
   }
 }
