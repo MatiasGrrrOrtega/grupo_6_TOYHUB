@@ -242,31 +242,48 @@
   background-color: var(--color-red-dark-950);
   width: 100%;
   padding:8px 15px;
-}
 
-.sponsors-container .sponsor-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
+  & .sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
-.sponsors-container .title {
-  font-size: 1.7em;
-  color: var(--color-light-50);
-  margin: 10px 0;
-  text-align: center;
-  width: 100%;
-}
+    & .sponsor {
+      width: 223px;
+      height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 12px;
+      background-color: var(--color-white);
+  
+      & .sponsor-image {
+        padding: 20px;
+        width: 100%;
+        height: 223px;
+      }
 
-.sponsors-container .sponsor {
-  width: 200px;
-  height: 100px;
-}
+      & .sponsor-name {
+        font-size: 1.2em;
+        color: var(--color-light-50);
+        background-color: var(--color-red-600);
+        width: 100%;
+        padding: 8px;
+        border-radius: 0 0 12px 12px;
+        text-align: center;
+      }
+    }
+  }
 
-.sponsors-container .sponsor img {
-  width: 100%;
-  height: 100%;
+  & .title {
+    font-size: 1.7em;
+    color: var(--color-light-50);
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -307,13 +324,26 @@
 
 @media (min-width: 1024px) {
 
+  .slider-container>ul.slider li img{
+    border-radius: 12px;
+  }
+
+  .slider-container>ul.slider li::before {
+    border-radius: 12px;
+  }
+
   .slider-container>ul.slider {
-    height: 410px;
+    height: 480px;
   }
 
   .slider-container>.menu li a {
     width: 10px;
     height: 10px;
+  }
+
+  .services-container {
+    margin: 20px auto;
+    border-radius: 12px;
   }
 
   .products-list {
@@ -323,6 +353,11 @@
   
   .products-list .product {
     width: 240px;
+  }
+
+  .sponsors-container{
+    border-radius: 12px;
+    margin-bottom: 20px;
   }
 
   .sponsors-container .sponsor {

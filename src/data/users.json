@@ -1,13 +1,21 @@
-{
-  "users": [
-    {
-      "id": 1,
-      "name": "Matias",
-      "lastName": "Ortega",
-      "telephone": "123456789",
-      "email": "aritomax75@gmail.com",
-      "password": "admin",
-      "role": "admin"
-    }
-  ]
-}
+[
+  {
+    "id": "24c98d6d-93bc-4711-ac53-561fb3927d51",
+    "name": "Matias",
+    "lastname": "Ortega",
+    "email": "aritomax75@gmail.com",
+    "photo": {
+      "fieldname": "photo-profile-user",
+      "originalname": "ManiquÃ­ bÃ¡sico.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "public/uploads/photosUsers",
+      "filename": "1708817096538-ManiquÃ­ bÃ¡sico.jpg",
+      "path": "public\\uploads\\photosUsers\\1708817096538-ManiquÃ­ bÃ¡sico.jpg",
+      "size": 916567
+    },
+    "telephone": "",
+    "password": "admin",
+    "confirm_password": "admin"
+  }
+]

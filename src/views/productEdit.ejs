@@ -13,11 +13,9 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main class='main main-product'>
-      <a class='back-button' href='/'><- Volvel al inicio</a>
-      
       <section class='product-edit-container'>
         <div class='product-edit-card'>
-          <form action='/products/<%= product.id  %>?_method=PUT' method='POST'>
+          <form class="form-products" action='/products/<%= product.id  %>?_method=PUT' method='POST'>
             <img src='/images/products/<%= product.img %>' alt='<%= product.name %>' />
             <h3>ID: <%= product.id%></h3>
             <h1 class='product-edit-title'>Editar Producto</h1>

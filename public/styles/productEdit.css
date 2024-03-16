@@ -3,30 +3,9 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 12px;
+  padding: 80px 15px 15px 15px;
 }
 
-.back-button{
-  display: block;
-  width: 140px;
-  text-decoration: none;
-  text-align: center;
-  margin: 12px 5px;
-  padding: 5px;
-  background-color: #22cc49;
-  border: none;
-  color: var(--color-white);
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  align-self: center;
-}
-
-.back-button:hover{
-  background-color: #1fbb42;
-}
 .product-edit-card{
   display: flex;
   flex-direction: column;
@@ -34,7 +13,7 @@
   justify-content: center;
 }
 
-form{
+.form-products{
   background-color: var(--color-light-50);
   padding: 15px;
   width: 70%;
@@ -46,7 +25,7 @@ form{
   justify-content: center;
 }
 
-form img{
+.form-products img{
   width: 100px;
   height: 100px;
   margin: 0;
@@ -54,13 +33,13 @@ form img{
   object-fit: cover;
 }
 
-form h1{
+.form-products h1{
   margin-bottom: 15px;
   font-size: 1em;
   color: var(--color-blue-dark-950);
 }
 
-form .product-edit-form-group{
+.form-products .product-edit-form-group{
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -68,12 +47,12 @@ form .product-edit-form-group{
   width: 100%;
 }
 
-form .product-edit-form-group label{
+.form-products .product-edit-form-group label{
   margin-bottom: 5px;
   color: var(--color-blue-dark-950);
 }
 
-form .product-edit-form-group input{
+.form-products .product-edit-form-group input{
   width: 100%;
   padding: 8px;
   margin-bottom: 6px;
@@ -83,7 +62,7 @@ form .product-edit-form-group input{
   outline: none;
 }
 
-form .product-edit-form-group select{
+.form-products .product-edit-form-group select{
   width: 100%;
   padding: 8px;
   margin-bottom: 6px;
@@ -93,7 +72,7 @@ form .product-edit-form-group select{
   outline: none;
 }
 
-form .product-edit-form-group textarea{
+.form-products .product-edit-form-group textarea{
   width: 100%;
   padding: 8px;
   margin-bottom: 6px;
@@ -104,7 +83,7 @@ form .product-edit-form-group textarea{
   resize: none;
 }
 
-form .product-edit-form-actions button{
+.form-products .product-edit-form-actions button{
   width: 120px;
   padding: 10px;
   margin: 5px 0;
@@ -136,76 +115,63 @@ form .product-edit-form-actions button{
 }
 
 @media (min-width: 768px){
-  form{
+  .form-products{
     width: 60%;
   }
 
-  form img{
+  .form-products img{
     width: 150px;
     height: 150px;
   }
 
-  form h1{
+  .form-products h1{
     font-size: 1.1em;
   }
 
-  form .product-edit-form-group input{
+  .form-products .product-edit-form-group input{
     padding: 10px;
   }
 
-  form .product-edit-form-group select{
+  .form-products .product-edit-form-group select{
     padding: 10px;
   }
 
-  form .product-edit-form-group textarea{
+  .form-products .product-edit-form-group textarea{
     padding: 10px;
   }
 
-  form .product-edit-form-actions button{
+  .form-products .product-edit-form-actions button{
     padding: 12px;
-  }
-
-  .back-button{
-    width: 160px;
-    padding: 8px;
-    font-size: 0.8em;
   }
 }
 
 @media (min-width: 1024px){
-  form{
+  .form-products{
     width: 70%;
   }
 
-  form img{
+  .form-products img{
     width: 200px;
     height: 200px;
   }
 
-  form h1{
+  .form-products h1{
     font-size: 1.4em;
   }
 
-  form .product-edit-form-group input{
+  .form-products .product-edit-form-group input{
     padding: 12px;
   }
 
-  form .product-edit-form-group select{
+  .form-products .product-edit-form-group select{
     padding: 12px;
   }
 
-  form .product-edit-form-group textarea{
+  .form-products .product-edit-form-group textarea{
     padding: 12px;
   }
 
-  form .product-edit-form-actions button{
+  .form-products .product-edit-form-actions button{
     padding: 14px;
-  }
-
-  .back-button{
-    width: 180px;
-    padding: 10px;
-    font-size: 1em;
-    text-align: center;
   }
 }

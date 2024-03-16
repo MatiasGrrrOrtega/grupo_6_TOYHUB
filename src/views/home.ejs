@@ -12,7 +12,7 @@
   <body>
     <%- include('./partials/header.ejs')  %>
   <!-- Seccion del MAIN -->
-  <% if (usuario[0].role == 'admin'){ %> 
+  <% if (true){ %> 
     <a class='admin-button' href="/products/create">Crear y Editar productos</a>
   <% } %>
     <main class="main main-home">
@@ -108,6 +108,7 @@
             <% marcas.map((marca)=>{ %>
               <div class="sponsor">
                 <img class="sponsor-image" src="/images/sponsors/<%= marca.img %>" alt="logo-sega">
+                <span class="sponsor-name"><%= marca.name %></span>
               </div>
             <% }) %>
           </div>
