@@ -4,6 +4,10 @@ const multer = require('multer')
 const userController = require('../controller/user')
 const authLogin = require('../middlewares/authLogin')
 const { check } = require('express-validator')
+const {
+  validateRegister,
+  validationErrors,
+} = require('../middlewares/validate-register')
 
 const validateUserLogin = [
   check('email')
@@ -38,7 +42,13 @@ router.get('/login', userController.renderLogin)
 router.get('/register', userController.renderRegister)
 router.get('/logout', userController.logoutUser)
 
-router.post('/', upload.single('photo-profile-user'), userController.createUser)
+router.post(
+  '/register',
+  upload.single('photo'),
+  validateRegister,
+  validationErrors,
+  userController.createUser
+)
 router.post('/login', validateUserLogin, userController.loginUser)
 
 module.exports = router

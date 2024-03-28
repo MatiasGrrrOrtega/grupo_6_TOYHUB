@@ -20,7 +20,8 @@ class userController {
 
   static createUser(req, res) {
     const { name, lastname, email, telephone, password, confirm_password } =
-      req.body
+      req.body;
+      console.log("el body antes de crear",req.body)
     const photoUserProfile = req.file
     const user = {
       id: crypto.randomUUID(),
