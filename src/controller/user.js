@@ -1,7 +1,10 @@
 const data = require('../data/users')
-const fs = require('fs')
-const path = require('path')
+const fs = require('node:fs')
+const path = require('node:path')
 const crypto = require('crypto')
+const { validationResult } = require('express-validator')
+const bcrypt = require('bcryptjs')
+
 class userController {
   static renderLogin(req, res) {
     res.render('login')
@@ -45,11 +48,66 @@ class userController {
 
   static deleteUser(req, res) {}
 
-  static loginUser(req, res) {}
+  static loginUser(req, res) {
+    const { email, password } = req.body
+    const errors = validationResult(req)
+    let userToLogin
+    if (!errors.isEmpty()) {
+      return res.render('login', { errors: errors.mapped(), oldData: req.body })
+    } else {
+      try {
+        let userJSON = fs.readFileSync(
+          path.join(__dirname, '../data/users.json'),
+          {
+            encoding: 'utf-8',
+          }
+        )
+        let users
+        if (userJSON == '') {
+          users = []
+        } else {
+          users = JSON.parse(userJSON)
+        }
 
-  static logoutUser(req, res) {}
+        for (let i = 0; i < users.length; i++) {
+          if (users[i].email == email) {
+            //console.log(bcrypt.compareSync(users[i].password, password))
+            if (password == users[i].password) {
+              userToLogin = users[i]
+              break
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error al comparar contraseñas:', error)
+        return res.render('login', {
+          errors: { msg: 'Hubo un problema al iniciar sesión' },
+        })
+      }
 
-  static renderProfile(req, res) {}
+      if (userToLogin === undefined) {
+        return res.render('login', {
+          errors: {
+            msg: 'El correo o la contraseña son incorrectos. O no esta registrado',
+          },
+        })
+      }
+
+      req.session.loggedUser = userToLogin
+      req.session.isLoggedIn = true
+
+      return res.redirect('/')
+    }
+  }
+
+  static logoutUser(req, res) {
+    req.session.destroy()
+    res.redirect('/user/login')
+  }
+
+  static renderProfile(req, res) {
+    res.render('profile', { user: req.session.loggedUser })
+  }
 
   static renderEditProfile(req, res) {}
 

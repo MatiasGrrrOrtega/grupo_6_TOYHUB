@@ -1,5 +1,5 @@
 .main-login{
-  padding: 15px;
+  padding: 80px 15px 15px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +89,7 @@
   color: var(--color-blue-dark-950);
   transition: top ease .3s, left ease .3s, padding ease .3s, margin ease .3s, font-size ease .3s, background-color ease .3s, color ease .3s;
 }
+
 
 .form-login .form-login-groups .form-group input:focus + label{
   top: -10px;
