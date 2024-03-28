@@ -155,9 +155,13 @@
   border-radius: 8px;
 }
 
+.form-group p{
+  color: red;
+}
+
 @media (min-width: 768px){
   .main-register{
-    height: 100vh;
+    /*height: 100vh;*/
   }
 
   .register{
@@ -167,7 +171,7 @@
 
 @media (min-width: 1024px){
   .main-register{
-    height: 100vh;
+    /*height: 100vh;*/
   }
 
   .register{
