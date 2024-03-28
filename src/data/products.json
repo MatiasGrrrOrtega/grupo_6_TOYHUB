@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Peluches de Mickey y Minnie",
-    "price": 3.807,
-    "dues": 1.269,
-    "share": 3,
-    "img": "peluche-de-mickey-y-minnie.webp",
-    "category": "Peluches",
-    "stock": 10,
-    "brand": "Disney",
-    "description": "Peluches de Mickey y Minnie de gran tamaño para niños y niñas."
-  },
-  {
     "id": 2,
     "name": "Sanrio Cinnamoroll-muñeco de peluche",
     "price": 9.334,
@@ -25,14 +13,15 @@
   },
   {
     "id": 3,
-    "name": "Peluche de Sullivan - Disney",
-    "price": 8.358,
+    "name": "Sanrio Cinnamoroll-muñeco de peluche",
+    "price": "107.334",
     "dues": 1.393,
-    "share": 4,
-    "img": "p1.webp",
-    "category": "Peluches",
-    "stock": 15,
-    "description": "Peluche de Sullivan de gran tamaño para niños y niñas."
+    "share": "4",
+    "img": "",
+    "category": "1",
+    "stock": "20",
+    "description": "Peluche de Cinnamoroll de gran tamaño para niños y niñas.",
+    "brand": "Sanrio"
   },
   {
     "id": 4,
