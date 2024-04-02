@@ -30,10 +30,18 @@
       <button class="header-button" onclick="viewMenuUser()">
         <img src="/images/logos/user-icon.png" alt="/views/register.html">
       </button>
-      <div class="menu-content-user" id="menu-content-user">
-        <a href="/user/login" class="user-button">Iniciar sesión</a>
-        <a href="/user/register" class="user-button">Registrarse</a>
-      </div>
+      <% if(isLogged) { %>
+        <div class="menu-content-user" id="menu-content-user">
+          <a href="#" class="user-button">Mi perfil</a>
+          <a href="#" class="user-button">Configuracion</a>
+          <a href="/user/logout" class="user-button">Cerrar sesión</a>
+        </div>
+      <% }else{ %>
+        <div class="menu-content-user" id="menu-content-user">
+          <a href="/user/login" class="user-button">Iniciar sesión</a>
+          <a href="/user/register" class="user-button">Registrarse</a>
+        </div>
+      <% }%>
     </div>
     <!-- Icono de carrito - Mi carrito -->
     <button class="header-button">

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles/general.css" />
   <link rel="stylesheet" href="/styles/productCreat.css" />
-  <title>ToyHub</title>
+  <title>ToyHub - Publicar Producto</title>
 </head>
 
 <body>
@@ -75,8 +75,8 @@
                 <td><%= product.name %></td>
                 <td><%= product.category %></td>
                 <td>
-                  <a class="button" href='/products/<%= product.id %>/edit'>Editar</a>
-                  <form class="form-delete" action='/products/<%= product.id %>?_method=DELETE' method='POST'>
+                  <a class="button" href='/products/admin?p=<%= product.id %>/edit'>Editar</a>
+                  <form class="form-delete" action='/proucts/admin/<%= product.id %>?_method=DELETE' method='POST'>
                     <input class="button" type="submit" value="Eliminar">
                   </form>
                 </td>

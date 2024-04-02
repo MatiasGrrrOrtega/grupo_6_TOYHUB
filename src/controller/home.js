@@ -8,6 +8,7 @@ class homeController {
       products: dataProducts,
       marcas: dataMarcas.marcas,
       usuario: dataUsers,
+      // isLogged: req.session.isLoggedIn,
     })
   }
 }

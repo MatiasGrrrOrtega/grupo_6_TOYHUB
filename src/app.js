@@ -3,13 +3,17 @@ const app = express()
 const port = 3000
 const path = require('path')
 const methodOverride = require('method-override')
+const session = require('express-session')
 
-app.use(express.static('public')) // Indicamos el motor de plantilla
 app.set('view engine', 'ejs') // Direccionamos a las vistas
 app.set('views', path.join(__dirname, '/views'))
+app.use(express.static('public')) // Indicamos el motor de plantilla
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(methodOverride('_method')) // for put and delete methods
+app.use(
+  session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })
+)
 
 const home = require('./routes/home')
 const user = require('./routes/user')
