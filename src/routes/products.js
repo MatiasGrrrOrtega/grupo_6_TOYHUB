@@ -1,23 +1,24 @@
 const express = require('express')
 const router = express.Router()
-
+const { validateSession } = require('../middlewares/validate-session')
+const { validateUserAdmin } = require('../middlewares/validate-admin')
 const productController = require('../controller/products')
 
-function authLoginMiddleware(req, res, next) {
-  if (!req.session.isLoggedIn) {
-    res.redirect('/user/login')
-  } else {
-    next()
-  }
-}
+router.get('/cart', validateSession, productController.renderProductCart)
+router.get(
+  '/admin/create',
+  validateUserAdmin,
+  productController.renderProductCreate
+)
+router.get('/:id', productController.renderProductDetail)
+router.get(
+  '/admin/:id/edit',
+  validateUserAdmin,
+  productController.renderProductEdit
+)
 
-router.get('/cart', productController.renderProductCart)
-router.get('/create', productController.renderProductCreate)
-router.get('/:id', authLoginMiddleware, productController.renderProductDetail)
-router.get('/:id/edit', productController.renderProductEdit)
-
-router.post('/', productController.addProduct)
-router.put('/:id', productController.editProduct)
-router.delete('/:id', productController.deleteProduct)
+router.post('/admin/', validateUserAdmin, productController.addProduct)
+router.put('/admin/:id', validateUserAdmin, productController.editProduct)
+router.delete('/admin/:id', validateUserAdmin, productController.deleteProduct)
 
 module.exports = router

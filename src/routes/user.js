@@ -1,42 +1,16 @@
 const express = require('express')
 const router = express.Router()
-const multer = require('multer')
 const userController = require('../controller/user')
-const authLogin = require('../middlewares/authLogin')
-const { check } = require('express-validator')
+const upload = require('../middlewares/photoUserMiddleware')
+
+const {
+  validateLogin,
+  validationErrorsLogin,
+} = require('../middlewares/validate-login')
 const {
   validateRegister,
   validationErrors,
 } = require('../middlewares/validate-register')
-
-const validateUserLogin = [
-  check('email')
-    .notEmpty()
-    .withMessage('Email is required')
-    .isEmail()
-    .withMessage('Email is invalid')
-    .bail(),
-  check('password').notEmpty().withMessage('Password is required'),
-]
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'public/uploads/photosUsers')
-  },
-  filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-${file.originalname}`)
-  },
-})
-
-const upload = multer({ storage })
-
-function authLoginMiddleware(req, res, next) {
-  if (req.session.isLoggedIn) {
-    res.redirect('/user/login')
-  } else {
-    next()
-  }
-}
 
 router.get('/login', userController.renderLogin)
 router.get('/register', userController.renderRegister)
@@ -47,8 +21,13 @@ router.post(
   upload.single('photo'),
   validateRegister,
   validationErrors,
-  userController.createUser
+  userController.registerUser
 )
-router.post('/login', validateUserLogin, userController.loginUser)
+router.post(
+  '/login',
+  validateLogin,
+  validationErrorsLogin,
+  userController.loginUser
+)
 
 module.exports = router

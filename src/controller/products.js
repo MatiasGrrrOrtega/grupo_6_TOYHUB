@@ -4,7 +4,7 @@ const path = require('path')
 
 class productsController {
   static renderProductCart(req, res) {
-    res.render('productCart')
+    res.render('productCart', { isLogged: req.session.isLoggedIn })
   }
 
   static renderProductDetail(req, res) {

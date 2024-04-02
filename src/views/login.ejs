@@ -13,62 +13,7 @@
 <body>
 
     <!-- Seccion del HEADER -->
-    <header class="main-header">
-      <!-- Logo -->
-      <div class="logo-container">
-        <a href="/"><img src="/images/logo_toyhub.jpg" alt="Logo de ToyHub" /></a>
-      </div>
-      <!-- Menú desplegable - Categorías -->
-      <div class="menu-container">
-        <button class="header-button" onclick="viewMenuBurger()">
-          <img src="/images/logos/boton-menu.png" alt="Menú" />
-        </button>
-        <div class="menu-content" id="menu-content">
-          <!-- Contenido del menu desplegable con secciones -->
-          <a href="#section1">Figuras de accion</a>
-          <a href="#section2">Muñecas</a>
-          <a href="#section3">Funko-Pop</a>
-          <a href="#section4">Peluches</a>
-        </div>
-      </div>
-        <!-- Icono de usuario - Mi cuenta -->
-      <div class="user-cart-container">
-        <div class="menu-content-query">
-          <!-- Contenido del menu desplegable con secciones -->
-          <a href="#section1">Figuras de accion</a>
-          <a href="#section2">Muñecas</a>
-          <a href="#section3">Funko-Pop</a>
-          <a href="#section4">Peluches</a>
-        </div>
-        <div class="user-button">
-          <button class="header-button" onclick="viewMenuUser()">
-            <img src="/images/logos/user-icon.png" alt="/views/register.html">
-          </button>
-          <% if(isLogged) {%>
-            <div class="menu-content-user" id="menu-content-user">
-              <a href="#" class="user-button">Mi perfil</a>
-              <a href="#" class="user-button">Vender</a>
-              <a href="#" class="user-button">Configuracion</a>
-              <a href="/user/logout" class="user-button">Cerrar sesión</a>
-            </div>
-          <% }else{ %>
-            <div class="menu-content-user" id="menu-content-user">
-              <a href="/user/login" class="user-button">Iniciar sesión</a>
-              <a href="/user/register" class="user-button">Registrarse</a>
-            </div>
-          <% }%>
-        </div>
-        <!-- Icono de carrito - Mi carrito -->
-        <button class="header-button">
-          <a href="/products/cart" class="cart-icon">
-            <img src="/images/logos/cart-outline.png" alt="/views/cart.html">
-          </a>
-        </button>
-        <button class="header-button">
-          <img src="/images/logos/search-icon.png" alt="search-icon">
-        </button>
-      </div>
-    </header>
+    <%- include('./partials/header.ejs') %>
 
     <main class="main main-login">
       <form class="form-login" action="/user/login" method="POST">
