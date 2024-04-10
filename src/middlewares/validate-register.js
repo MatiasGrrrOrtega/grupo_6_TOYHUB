@@ -1,5 +1,5 @@
 const { check, validationResult } = require('express-validator')
-
+const dataUsers = require('../data/users.json')
 const validateRegister = [
   check('name')
     .notEmpty()
@@ -18,8 +18,14 @@ const validateRegister = [
     .withMessage('Debe ingresar email')
     .bail()
     .isEmail()
-    .withMessage('Debe ingresar un email valido'),
-
+    .withMessage('Debe ingresar un email valido')
+    .custom((value, { req }) => {
+      const user = dataUsers.find((user) => user.email === value)
+      if (user) {
+        throw new Error('El email ya se encuentra registrado')
+      }
+      return true
+    }),
   check('password')
     .notEmpty()
     .withMessage('Debe ingresar password')
@@ -56,7 +62,7 @@ const validationErrors = (req, res, next) => {
   res.render('register', {
     old: req.body,
     errors: errors.mapped(),
-    isLogged: req.session.isLoggedIn,
+    isLogged: { userLogged: req.session.isLoggedIn },
   })
 }
 

@@ -1,4 +1,5 @@
 const data = require('../data/users')
+const admins = require('../data/admins')
 const fs = require('node:fs')
 const path = require('node:path')
 const crypto = require('crypto')
@@ -7,11 +8,21 @@ const bcrypt = require('bcryptjs')
 class userController {
   // renderizado de vistas
   static renderLogin(req, res) {
-    res.render('login', { isLogged: req.session.isLoggedIn })
+    res.render('login', {
+      isLogged: {
+        userLogged: req.session.isLoggedIn,
+        userBody: req.session.loggedUser,
+      },
+    })
   }
 
   static renderRegister(req, res) {
-    res.render('register', { isLogged: req.session.isLoggedIn })
+    res.render('register', {
+      isLogged: {
+        userLogged: req.session.isLoggedIn,
+        userBody: req.session.loggedUser,
+      },
+    })
   }
 
   static renderAllUsers(req, res) {
@@ -21,6 +32,22 @@ class userController {
   static renderEditProfile(req, res) {}
 
   static renderUserProfile(req, res) {}
+
+  static assignRoleUser(name, lastname, email) {
+    const roleAdmin = 'admin' // asignar el rol de administrador
+    const roleUser = 'user' // asignar el rol de usuario
+    for (let i = 0; i < admins.length; i++) {
+      if (
+        admins[i].name.includes(name) &&
+        admins[i].lastname.includes(lastname) &&
+        admins[i].email === email
+      ) {
+        return roleAdmin
+      } else {
+        return roleUser
+      }
+    }
+  }
 
   // proceso de registro de usuario
   static registerUser(req, res) {
@@ -32,11 +59,11 @@ class userController {
       name,
       lastname,
       email,
-      photo: photoUserProfile || '',
+      photo: photoUserProfile ?? '',
       telephone: telephone || '',
       password: bcrypt.hashSync(password, 10),
       confirm_password: bcrypt.hashSync(confirm_password, 10),
-      role: 'user',
+      role: userController.assignRoleUser(name, lastname, email),
     }
 
     data.push(user)
@@ -78,8 +105,7 @@ class userController {
     try {
       for (let i = 0; i < users.length; i++) {
         if (users[i].email == email) {
-          // bcrypt.compareSync(users[i].password, password)
-          if (password == users[i].password) {
+          if (bcrypt.compareSync(password, users[i].password)) {
             userToLogin = users[i]
             break
           }
@@ -99,7 +125,7 @@ class userController {
         },
       })
     }
-    console.log('validateUserAdmin', req.url)
+
     req.session.loggedUser = userToLogin
     req.session.isLoggedIn = true
 

@@ -6,6 +6,11 @@ const productController = require('../controller/products')
 
 router.get('/cart', validateSession, productController.renderProductCart)
 router.get(
+  '/admin/allproducts',
+  validateUserAdmin,
+  productController.renderAllProducts
+)
+router.get(
   '/admin/create',
   validateUserAdmin,
   productController.renderProductCreate

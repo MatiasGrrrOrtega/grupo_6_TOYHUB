@@ -3,8 +3,23 @@ const fs = require('fs')
 const path = require('path')
 
 class productsController {
+  static renderAllProducts(req, res) {
+    res.render('allProducts', {
+      products: data,
+      isLogged: {
+        userLogged: req.session.isLoggedIn,
+        userBody: req.session.loggedUser,
+      },
+    })
+  }
+
   static renderProductCart(req, res) {
-    res.render('productCart', { isLogged: req.session.isLoggedIn })
+    res.render('productCart', {
+      isLogged: {
+        userLogged: req.session.isLoggedIn,
+        userBody: req.session.loggedUser,
+      },
+    })
   }
 
   static renderProductDetail(req, res) {
@@ -17,6 +32,10 @@ class productsController {
     res.render('productDetail', {
       product: data[id - 1],
       productsRecommended,
+      isLogged: {
+        userLogged: req.session.isLoggedIn,
+        userBody: req.session.loggedUser,
+      },
     })
   }
 
@@ -25,12 +44,20 @@ class productsController {
     const product = data.find((product) => product.id == id)
     res.render('productEdit', {
       product,
+      isLogged: {
+        userLogged: req.session.isLoggedIn,
+        userBody: req.session.loggedUser,
+      },
     })
   }
 
   static renderProductCreate(req, res) {
-    res.render('productCreat', {
+    res.render('productCreate', {
       products: data,
+      isLogged: {
+        userLogged: req.session.isLoggedIn,
+        userBody: req.session.loggedUser,
+      },
     })
   }
 

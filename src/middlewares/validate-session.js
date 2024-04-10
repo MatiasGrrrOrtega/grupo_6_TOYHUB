@@ -1,5 +1,5 @@
 function validateSession(req, res, next) {
-  if (req.session.isLoggedIn === true) {
+  if (req.session.isLoggedIn) {
     next()
   } else {
     res.redirect('/user/login')

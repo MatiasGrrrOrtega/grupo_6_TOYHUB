@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    
+    <% if(isLogged.userLogged && isLogged.userBody.role == "admin") { %>
+      <%- include('./partials/panelAdmin.ejs') %>
+    <% } %>
     <main class='main main-product'>
       <section class='product-edit-container'>
         <div class='product-edit-card'>
@@ -58,15 +60,11 @@
 
             <div class='product-edit-form-actions'>
               <button type='submit' class='btn btn-primary'>Guardar</button>
-              <button type='reset' class='btn btn-primary'><a href='/products/create'>Cancelar</a></button>
+              <button type='reset' class='btn btn-primary'><a href='/products/admin/allproducts'>Cancelar</a></button>
             </div>
           </form>
         </div>
       </section>
     </main>
-
-    <%- include('./partials/footer.ejs') %>
-
   </body>
-
 </html>
