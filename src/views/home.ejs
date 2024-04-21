@@ -10,9 +10,10 @@
     <title>ToyHub</title>
   </head>
   <body>
-
+    <% if(isLogged.userLogged && isLogged.userBody.role == "admin") { %>
+      <%- include('./partials/panelAdmin.ejs') %>
+    <% } %>
     <%- include('./partials/header.ejs')  %>
-
   <!-- Seccion del MAIN -->
     <main class="main main-home">
       <section class="slider-container">

@@ -17,7 +17,10 @@ const validationErrorsLogin = (req, res, next) => {
   }
   res.render('login', {
     old: req.body,
-    isLogged: req.session.isLoggedIn,
+    isLogged: {
+      userLogged: req.session.isLoggedIn,
+      userBody: req.session.loggedUser,
+    },
     errors: errors.mapped(),
   })
 }

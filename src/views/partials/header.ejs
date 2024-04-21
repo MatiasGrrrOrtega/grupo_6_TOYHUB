@@ -6,7 +6,7 @@
   </div>
   <!-- Menú desplegable - Categorías -->
   <div class="menu-container">
-    <button class="header-button" onclick="viewMenuBurger()">
+    <button id="menu-burger" class="header-button">
       <img src="/images/logos/boton-menu.png" alt="Menú" />
     </button>
     <div class="menu-content" id="menu-content">
@@ -17,7 +17,7 @@
       <a href="#section4">Peluches</a>
     </div>
   </div>
-    <!-- Icono de usuario - Mi cuenta -->
+
   <div class="user-cart-container">
     <div class="menu-content-query">
       <!-- Contenido del menu desplegable con secciones -->
@@ -27,10 +27,10 @@
       <a href="#section4">Peluches</a>
     </div>
     <div class="user-button">
-      <button class="header-button" onclick="viewMenuUser()">
+      <button id="menu-user" class="header-button">
         <img src="/images/logos/user-icon.png" alt="/views/register.html">
       </button>
-      <% if(isLogged) { %>
+      <% if(isLogged.userLogged) { %>
         <div class="menu-content-user" id="menu-content-user">
           <a href="#" class="user-button">Mi perfil</a>
           <a href="#" class="user-button">Configuracion</a>
@@ -43,7 +43,7 @@
         </div>
       <% }%>
     </div>
-    <!-- Icono de carrito - Mi carrito -->
+
     <button class="header-button">
       <a href="/products/cart" class="cart-icon">
         <img src="/images/logos/cart-outline.png" alt="/views/cart.html">
@@ -56,9 +56,11 @@
 </header>
 
 <script>
-  // Función para desplegar el menú
-  function viewMenuBurger() {
-    let menu = document.getElementById("menu-content");
+  // Función para desplegar el menú hamburgesa
+  const btnMenuBurger = document.getElementById("menu-burger");
+  const btnMenuUser = document.getElementById("menu-user");
+
+  function toggleMenu(menu) {
     if (menu.style.display === "block") {
       menu.style.display = "none";
     } else {
@@ -66,12 +68,14 @@
     }
   }
 
-  function viewMenuUser() {
+  btnMenuBurger.addEventListener("click", () => {
+    let menu = document.getElementById("menu-content");
+    toggleMenu(menu);     
+  });
+
+  // Función para desplegar el menú de usuario
+  btnMenuUser.addEventListener("click", () => {
     let menu = document.getElementById("menu-content-user");
-    if (menu.style.display === "block") {
-      menu.style.display = "none";
-    } else {
-      menu.style.display = "block";
-    }
-  }
+    toggleMenu(menu);
+  });
 </script>
