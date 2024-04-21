@@ -87,5 +87,22 @@
       </form>
     </main>
 </body>
+<script>
+  const btnMenuUser = document.getElementById("menu-user");
+
+  function toggleMenu(menu) {
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+
+  // Función para desplegar el menú de usuario
+  btnMenuUser.addEventListener("click", () => {
+    let menu = document.getElementById("menu-content-user");
+    toggleMenu(menu);
+  });
+</script>
 
 </html>

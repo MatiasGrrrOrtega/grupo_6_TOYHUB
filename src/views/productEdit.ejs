@@ -14,6 +14,32 @@
     <% if(isLogged.userLogged && isLogged.userBody.role == "admin") { %>
       <%- include('./partials/panelAdmin.ejs') %>
     <% } %>
+    <header class="main-header">
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="/"><img src="/images/logo_toyhub.jpg" alt="Logo de ToyHub" /></a>
+      </div>
+  
+      <div class="user-cart-container">
+        <div class="user-button">
+          <button id="menu-user" class="header-button">
+            <img src="/images/logos/user-icon.png" alt="/views/register.html">
+          </button>
+          <% if(isLogged.userLogged) { %>
+            <div class="menu-content-user" id="menu-content-user">
+              <a href="#" class="user-button">Mi perfil</a>
+              <a href="#" class="user-button">Configuracion</a>
+              <a href="/user/logout" class="user-button">Cerrar sesión</a>
+            </div>
+          <% }else{ %>
+            <div class="menu-content-user" id="menu-content-user">
+              <a href="/user/login" class="user-button">Iniciar sesión</a>
+              <a href="/user/register" class="user-button">Registrarse</a>
+            </div>
+          <% }%>
+        </div>
+      </div>
+    </header>
     <main class='main main-product'>
       <section class='product-edit-container'>
         <div class='product-edit-card'>
@@ -67,4 +93,21 @@
       </section>
     </main>
   </body>
+  <script>
+    const btnMenuUser = document.getElementById("menu-user");
+  
+    function toggleMenu(menu) {
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+  
+    // Función para desplegar el menú de usuario
+    btnMenuUser.addEventListener("click", () => {
+      let menu = document.getElementById("menu-content-user");
+      toggleMenu(menu);
+    });
+  </script>
 </html>
