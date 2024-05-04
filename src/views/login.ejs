@@ -10,30 +10,30 @@
   <title>ToyHub - Login</title>
 </head>
 
-<body>
-
+<body class="body-login">
     <!-- Seccion del HEADER -->
-    <%- include('./partials/header.ejs') %>
-
     <main class="main main-login">
       <form class="form-login" action="/user/login" method="POST">
+        <div class="form-logo">
+          <img src="/images/logo_toyhub.jpg" alt="ToyHub" />
+        </div>
         <h1 class="form-title">LOGIN <i class="fa-solid fa-user fa-xl"></i></h1>
         <div class="form-login-groups">
           <% if(locals.errors && errors.msg) { %>
-            <span><%= errors.msg %></span>
+            <span class="error-message"><%= errors.msg %></span>
           <% } %>
           <div class="form-group">
             <input type="email" id="email" name="email" value="<%= (locals.oldData && oldData.email) ? oldData.email : '' %>" />
             <label for="email">Email</label>
             <% if(locals.errors && errors.email) { %>
-              <span><%= errors.email.msg %></span>
+              <span class="error-message"><%= errors.email.msg %></span>
             <% } %>
           </div>
           <div class="form-group">
             <input type="password" id="password" name="password" value="<%= (locals.oldData && oldData.password) ? oldData.password : '' %>" />
             <label for="password">Contraseña</label>
             <% if(locals.errors && errors.password) { %>
-              <span><%= errors.password.msg %></span>
+              <span class="error-message"><%= errors.password.msg %></span>
             <% } %>
           </div>
         </div>
@@ -44,23 +44,17 @@
             <input type="checkbox" name="remember-me" id="remember-me" />
           </label>
         </div>
-        <input type="submit" value="Iniciar Sesion" />
-        <div class="buttons-login-option">
-          <a>
-            <i class="fa-brands fa-google fa-xl"></i> Acceder con Google
-          </a>
-          <a>
-            <i class="fa-brands fa-facebook fa-xl"></i> Acceder con Facebook
-          </a>
+        <div>
+          <input type="submit" value="Iniciar Sesion" />
+          <span> or </span>
+          <a class="button-return" href="/"><i class="fa-solid fa-house"></i></a>
         </div>
       </form>
       <div class="dont-have-account">
         <p>¿No tienes cuenta?</p>
-        <a href="login">Crear Cuenta</a>
+        <a href="/user/register">Crear Cuenta</a>
       </div>
     </main>
-
-    <%- include('./partials/footer.ejs') %>
 </body>
 
 </html>

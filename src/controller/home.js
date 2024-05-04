@@ -1,6 +1,6 @@
-const dataProducts = require('../data/products')
-const dataMarcas = require('../data/marcas')
-const dataUsers = require('../data/users')
+const dataProducts = require('../db/products')
+const dataMarcas = require('../db/marcas')
+const dataUsers = require('../db/users')
 
 class homeController {
   static renderHome(req, res) {

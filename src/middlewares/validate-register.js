@@ -1,5 +1,5 @@
 const { check, validationResult } = require('express-validator')
-const dataUsers = require('../data/users.json')
+const dataUsers = require('../db/users.json')
 const validateRegister = [
   check('name')
     .notEmpty()

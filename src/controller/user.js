@@ -1,5 +1,5 @@
-const data = require('../data/users')
-const admins = require('../data/admins')
+const data = require('../db/users')
+const admins = require('../db/admins')
 const fs = require('node:fs')
 const path = require('node:path')
 const crypto = require('crypto')
@@ -34,18 +34,20 @@ class userController {
   static renderUserProfile(req, res) {}
 
   static assignRoleUser(name, lastname, email) {
-    const roleAdmin = 'admin' // asignar el rol de administrador
-    const roleUser = 'user' // asignar el rol de usuario
+    const role = ''
     for (let i = 0; i < admins.length; i++) {
       if (
         admins[i].name.includes(name) &&
         admins[i].lastname.includes(lastname) &&
         admins[i].email === email
       ) {
-        return roleAdmin
+        role = 'admin'
+        break
       } else {
-        return roleUser
+        role = 'user'
       }
+
+      return role
     }
   }
 

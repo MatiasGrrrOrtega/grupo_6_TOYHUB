@@ -6,14 +6,15 @@ const upload = require('../middlewares/photoUserMiddleware')
 const {
   validateLogin,
   validationErrorsLogin,
+  userIsLogged,
 } = require('../middlewares/validate-login')
 const {
   validateRegister,
   validationErrors,
 } = require('../middlewares/validate-register')
 
-router.get('/login', userController.renderLogin)
-router.get('/register', userController.renderRegister)
+router.get('/login', userIsLogged, userController.renderLogin)
+router.get('/register', userIsLogged, userController.renderRegister)
 router.get('/logout', userController.logoutUser)
 
 router.post(

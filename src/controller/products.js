@@ -1,4 +1,4 @@
-const data = require('../data/products')
+const data = require('../db/products')
 const fs = require('fs')
 const path = require('path')
 
