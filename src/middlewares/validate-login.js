@@ -10,22 +10,28 @@ const validateLogin = [
   check('password').notEmpty().withMessage('Password is required'),
 ]
 
+const validateUserLogged = (req, res, next) => {
+  if (req.session.loggedUser == undefined) {
+    res.redirect('/')
+  } else {
+    next()
+  }
+}
+
 const validationErrorsLogin = (req, res, next) => {
   const errors = validationResult(req)
   if (errors.isEmpty()) {
     return next()
+  } else {
+    res.render('login', {
+      oldData: req.body,
+      errors: errors.mapped(),
+    })
   }
-  res.render('login', {
-    old: req.body,
-    isLogged: {
-      userLogged: req.session.isLoggedIn,
-      userBody: req.session.loggedUser,
-    },
-    errors: errors.mapped(),
-  })
 }
 
 module.exports = {
   validateLogin,
   validationErrorsLogin,
+  validateUserLogged,
 }

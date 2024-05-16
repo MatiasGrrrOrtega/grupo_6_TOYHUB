@@ -11,9 +11,7 @@
 </head>
 
 <body>
-    <% if(isLogged.userLogged && isLogged.userBody.role == "admin") { %>
-      <%- include('./partials/panelAdmin.ejs') %>
-    <% } %>
+    <%- include('./partials/panelAdmin.ejs') %>
     <header class="main-header">
       <!-- Logo -->
       <div class="logo-container">
@@ -25,7 +23,7 @@
           <button id="menu-user" class="header-button">
             <img src="/images/logos/user-icon.png" alt="/views/register.html">
           </button>
-          <% if(isLogged.userLogged) { %>
+          <% if(user != undefined) { %>
             <div class="menu-content-user" id="menu-content-user">
               <a href="#" class="user-button">Mi perfil</a>
               <a href="#" class="user-button">Configuracion</a>
@@ -44,7 +42,7 @@
       <section class='product-edit-container'>
         <div class='product-edit-card'>
           <form class="form-products" action='/products/<%= product.id  %>?_method=PUT' method='POST'>
-            <img src='/images/products/<%= product.img %>' alt='<%= product.name %>' />
+            <img src='/uploads/photosProducts/<%= product.images[0].name %>' alt='<%= product.name %>' />
             <h3>ID: <%= product.id%></h3>
             <h1 class='product-edit-title'>Editar Producto</h1>
             <div class='product-edit-form-group'>
@@ -53,7 +51,7 @@
             </div>
             <div class='product-edit-form-group'>
               <label for='price'>Precio</label>
-              <input type='number' id='price' name='price' value='<%= product.price %>' required />
+              <input type="number" id='price' name='price' value='<%= product.price %>' required />
             </div>
             <div class='product-edit-form-group'>
               <label for='stock'>Stock</label>
@@ -65,7 +63,7 @@
             </div>
             <div class='product-edit-form-group'>
               <label for='brand'>Marca</label>
-              <input type='text' id='brand' name='brand' value='<%= product.brand %>' required />
+              <input type='text' id='brand' name='brand' value='<%= product.brand.name %>' required />
             </div>
             <div class='product-edit-form-group'>
               <label for='description'>Descripción</label>

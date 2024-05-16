@@ -1,5 +1,6 @@
-const data = require('../data/users')
-const admins = require('../data/admins')
+const data = require('../db/users')
+const db = require('../database/models')
+const admins = require('../db/admins')
 const fs = require('node:fs')
 const path = require('node:path')
 const crypto = require('crypto')
@@ -7,73 +8,91 @@ const bcrypt = require('bcryptjs')
 
 class userController {
   // renderizado de vistas
-  static renderLogin(req, res) {
-    res.render('login', {
-      isLogged: {
-        userLogged: req.session.isLoggedIn,
-        userBody: req.session.loggedUser,
-      },
-    })
+  static loginPage(req, res) {
+    res.render('login')
   }
 
-  static renderRegister(req, res) {
-    res.render('register', {
-      isLogged: {
-        userLogged: req.session.isLoggedIn,
-        userBody: req.session.loggedUser,
-      },
-    })
+  static registerPage(req, res) {
+    res.render('register')
   }
 
-  static renderAllUsers(req, res) {
+  static allUsers(req, res) {
     res.render('users', { users: data })
   }
 
-  static renderEditProfile(req, res) {}
-
-  static renderUserProfile(req, res) {}
-
-  static assignRoleUser(name, lastname, email) {
-    const roleAdmin = 'admin' // asignar el rol de administrador
-    const roleUser = 'user' // asignar el rol de usuario
-    for (let i = 0; i < admins.length; i++) {
-      if (
-        admins[i].name.includes(name) &&
-        admins[i].lastname.includes(lastname) &&
-        admins[i].email === email
-      ) {
-        return roleAdmin
-      } else {
-        return roleUser
-      }
-    }
-  }
-
   // proceso de registro de usuario
-  static registerUser(req, res) {
-    const { name, lastname, email, telephone, password, confirm_password } =
+  static createUser(req, res) {
+    const { name, lastname, email, telephone, password } =
       req.body
     const photoUserProfile = req.file
     const user = {
       id: crypto.randomUUID(),
-      name,
-      lastname,
-      email,
-      photo: photoUserProfile ?? '',
+      name: name,
+      lastname: lastname,
+      email: email,
       telephone: telephone || '',
       password: bcrypt.hashSync(password, 10),
-      confirm_password: bcrypt.hashSync(confirm_password, 10),
-      role: userController.assignRoleUser(name, lastname, email),
+      photo: {
+        id: crypto.randomInt(1, 1000000),
+        name: photoUserProfile.filename ?? 'default-user.jpg',
+      },
+      roles_id: userController.assignRoleUser(name, lastname, email),
     }
 
-    data.push(user)
-    fs.writeFileSync(
-      path.join(__dirname, '..', 'data', 'users.json'),
-      JSON.stringify(data, null, 2),
-      { encoding: 'utf8' }
-    )
+    try {
+      db.Users.create(user,{
+        include: [{association: 'photo'}]
+      }).then(() => {
+        res.redirect('/user/login')
+      })
+    } catch (error) {
+      console.error('Error al crear usuario:', error)
+      return res.render('register', {
+        errors: { msg: 'Hubo un problema al registrar el usuario' },
+      })
+    }
+  }
+
+  // proceso de inicio de sesión
+  static loginUser(req, res) {
+    const { email, password } = req.body
+    let userToLogin
+    try {
+      db.Users.findOne({
+        where: {
+          email: email
+        }
+      }).then((user) => {
+        if (bcrypt.compareSync(password, user.password)) {
+          userToLogin = user
+        }
+        if (!userToLogin) {
+          return res.render('login', {
+            errors: { msg: 'El email o la contraseña son incorrectos' },
+          })
+        }
+        req.session.loggedUser = userToLogin
+        return res.redirect('/')
+      })
+    } catch (error) {
+      console.error('Error al comparar contraseñas:', error)
+      return res.render('login', {
+        errors: { msg: 'Hubo un problema al iniciar sesión' },
+      })
+    }
+  }
+
+  // proceso de cierre de sesión
+  static logoutUser(req, res) {
+    req.session.destroy()
     res.redirect('/user/login')
   }
+  
+  // proceso de edición de perfil
+  static editProfile(req, res) {}
+
+  // proceso de visualización de perfil
+  static userProfile(req, res) {}
 
   // proceso de edición de usuario
   static updateUser(req, res) {}
@@ -81,61 +100,25 @@ class userController {
   // proceso de eliminación de usuario
   static deleteUser(req, res) {}
 
-  static getUsers() {
-    let userJSON = fs.readFileSync(path.join(__dirname, '../data/users.json'), {
-      encoding: 'utf-8',
-    })
-
-    let users
-
-    if (userJSON == '') {
-      users = []
-    } else {
-      users = JSON.parse(userJSON)
-    }
-
-    return users
-  }
-
-  // proceso de inicio de sesión
-  static loginUser(req, res) {
-    const { email, password } = req.body
-    const users = userController.getUsers()
-    let userToLogin
-    try {
-      for (let i = 0; i < users.length; i++) {
-        if (users[i].email == email) {
-          if (bcrypt.compareSync(password, users[i].password)) {
-            userToLogin = users[i]
-            break
-          }
-        }
+  // asignación de roles a los usuarios
+  static assignRoleUser(name, lastname, email) {
+    let role = 0
+    for (let i = 0; i < admins.length; i++) {
+      if (
+        admins[i].name.includes(name) &&
+        admins[i].lastname.includes(lastname) &&
+        admins[i].email === email
+      ) {
+        // si el usuario es un administrador
+        role = 2
+        break
+      } else {
+        // si el usuario es un cliente
+        role = 1
+        break
       }
-    } catch (error) {
-      console.error('Error al comparar contraseñas:', error)
-      return res.render('login', {
-        errors: { msg: 'Hubo un problema al iniciar sesión' },
-      })
     }
-
-    if (userToLogin === undefined) {
-      return res.render('login', {
-        errors: {
-          msg: 'El correo o la contraseña son incorrectos',
-        },
-      })
-    }
-
-    req.session.loggedUser = userToLogin
-    req.session.isLoggedIn = true
-
-    return res.redirect('/')
-  }
-
-  // proceso de cierre de sesión
-  static logoutUser(req, res) {
-    req.session.destroy()
-    res.redirect('/user/login')
+    return role
   }
 }
 

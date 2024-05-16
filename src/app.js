@@ -11,9 +11,7 @@ app.use(express.static('public')) // Indicamos el motor de plantilla
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(methodOverride('_method')) // for put and delete methods
-app.use(
-  session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })
-)
+app.use(session({ secret: 'mysecret', resave: false, saveUninitialized: true }))
 
 const home = require('./routes/home')
 const user = require('./routes/user')

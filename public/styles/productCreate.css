@@ -1,9 +1,12 @@
+.body-create-product{
+  height: 100vh;
+}
+
 .main-product{
+  padding-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
 }
 
 .form-create{
@@ -103,7 +106,7 @@
 @media (min-width: 768px){
   .main-product{
     margin: 0 auto;
-    height: 100vh;
+    height: 100%;
   }
 
   .form-create{

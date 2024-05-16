@@ -29,7 +29,6 @@ body{
 main{
   max-width: 1200px;
   margin: auto;
-  padding-top: 60px;
 }
 
 
@@ -274,6 +273,60 @@ main{
       font-family: sans-serif;
     }
   }
+}
+
+.button-return{
+  display: inline;
+  text-decoration: none;
+  background-color: var(--color-blue-dark-950);
+  color: var(--color-white);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  &:hover{
+    background-color: var(--color-lightblue-500);
+  }
+}
+
+/* estilo de para mensaje de error de formularios*/
+.form-group .error-message{
+  display: inline-block;
+  width: 250px;
+  color: var(--color-red-600);
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0;
+  padding: 2px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  bottom: 5px;
+  left: calc(100% - 250px);
+  background-color: var(--color-red-ligth-300);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  animation: shake 0.5s ease-in-out 0.2s 1 normal forwards;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  60% { transform: translateX(10px); }
+  70% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
 }
 
 @media (min-width: 1024px){

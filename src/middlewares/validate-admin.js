@@ -1,8 +1,7 @@
 function validateUserAdmin(req, res, next) {
-  console.log(req.session.isLoggedIn)
-  const user = req.session.loggedUser
-  const isAdmin = user.role
-  if (isAdmin === 'admin') {
+  let user = req.session.loggedUser
+  let isAdmin = user.roles_id
+  if (isAdmin === 2) {
     next()
   } else {
     res.redirect('/')
