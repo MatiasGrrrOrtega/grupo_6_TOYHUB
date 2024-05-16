@@ -1,29 +1,36 @@
 const express = require('express')
 const router = express.Router()
-const { validateSession } = require('../middlewares/validate-session')
+const { validateUserLogged } = require('../middlewares/validate-login')
 const { validateUserAdmin } = require('../middlewares/validate-admin')
+const upload = require('../middlewares/photosProductMiddleware')
 const productController = require('../controller/products')
 
-router.get('/cart', validateSession, productController.renderProductCart)
-router.get(
-  '/admin/allproducts',
-  validateUserAdmin,
-  productController.renderAllProducts
-)
+
 router.get(
   '/admin/create',
   validateUserAdmin,
-  productController.renderProductCreate
+  productController.productCreate
 )
-router.get('/:id', productController.renderProductDetail)
+router.get('/:id', productController.productDetail)
 router.get(
   '/admin/:id/edit',
   validateUserAdmin,
-  productController.renderProductEdit
+  productController.productEdit
 )
+router.get('/cart', validateUserLogged, productController.productCart)
 
-router.post('/admin/', validateUserAdmin, productController.addProduct)
-router.put('/admin/:id', validateUserAdmin, productController.editProduct)
-router.delete('/admin/:id', validateUserAdmin, productController.deleteProduct)
+// CRUD
+router.get(
+  '/admin/allproducts',
+  validateUserAdmin,
+  productController.allProducts
+)
+router.post(
+  '/admin/create',
+  upload.array('images', 5),
+  productController.create
+)
+router.put('/admin/:id', productController.edit)
+router.delete('/admin/:id', productController.delete)
 
 module.exports = router

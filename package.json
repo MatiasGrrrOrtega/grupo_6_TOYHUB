@@ -1,36 +1,27 @@
 {
   "name": "toyhub",
   "version": "1.0.0",
-  "description": "Bienvenido a Toy Hub , el lugar perfecto donde la magia cobra vida y la imaginación se desborda. En nuestra tienda, nos apasiona ofrecerte una cuidada selección de muñecos para dos públicos muy especiales: padres de familia que buscan el compañero de juegos ideal para sus hijos y adultos coleccionistas que desean agregar piezas únicas a su tesoro.",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js",
     "dev": "nodemon src/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MatiasGrrrOrtega/grupo_6_TOYHUB.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MatiasGrrrOrtega/grupo_6_TOYHUB/issues"
-  },
-  "homepage": "https://github.com/MatiasGrrrOrtega/grupo_6_TOYHUB#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "cookie-parser": "^1.4.6",
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "express-validator": "^7.0.1",
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
-    "mysql2": "^3.9.3",
-    "sequelize": "^6.37.2"
+    "mysql2": "^3.9.7",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.1.0"
   }
 }

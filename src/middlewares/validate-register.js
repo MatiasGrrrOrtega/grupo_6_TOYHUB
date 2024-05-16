@@ -5,7 +5,7 @@ const validateRegister = [
     .notEmpty()
     .withMessage('Debe ingresar nombre de usuario')
     .bail()
-    .isLength({ min: 5 })
+    .isLength({ min: 1 })
     .withMessage('Nombre demasiado corto'),
 
   check('lastname')
@@ -62,7 +62,6 @@ const validationErrors = (req, res, next) => {
   res.render('register', {
     old: req.body,
     errors: errors.mapped(),
-    isLogged: { userLogged: req.session.isLoggedIn },
   })
 }
 

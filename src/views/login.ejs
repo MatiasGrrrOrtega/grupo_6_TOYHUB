@@ -12,12 +12,12 @@
 
 <body class="body-login">
     <!-- Seccion del HEADER -->
-    <main class="main main-login">
+    <main class="main-login">
       <form class="form-login" action="/user/login" method="POST">
         <div class="form-logo">
           <img src="/images/logo_toyhub.jpg" alt="ToyHub" />
         </div>
-        <h1 class="form-title">LOGIN <i class="fa-solid fa-user fa-xl"></i></h1>
+        <h1 class="form-title">Iniciar Sesion</h1>
         <div class="form-login-groups">
           <% if(locals.errors && errors.msg) { %>
             <span class="error-message"><%= errors.msg %></span>
@@ -50,10 +50,6 @@
           <a class="button-return" href="/"><i class="fa-solid fa-house"></i></a>
         </div>
       </form>
-      <div class="dont-have-account">
-        <p>¿No tienes cuenta?</p>
-        <a href="/user/register">Crear Cuenta</a>
-      </div>
     </main>
 </body>
 

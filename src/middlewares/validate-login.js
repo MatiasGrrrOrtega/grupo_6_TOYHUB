@@ -10,8 +10,8 @@ const validateLogin = [
   check('password').notEmpty().withMessage('Password is required'),
 ]
 
-const userIsLogged = (req, res, next) => {
-  if (req.session.isLoggedIn) {
+const validateUserLogged = (req, res, next) => {
+  if (req.session.loggedUser == undefined) {
     res.redirect('/')
   } else {
     next()
@@ -23,13 +23,8 @@ const validationErrorsLogin = (req, res, next) => {
   if (errors.isEmpty()) {
     return next()
   } else {
-    req.session.isLoggedIn = false
     res.render('login', {
       oldData: req.body,
-      isLogged: {
-        userLogged: req.session.isLoggedIn,
-        userBody: req.session.loggedUser,
-      },
       errors: errors.mapped(),
     })
   }
@@ -38,5 +33,5 @@ const validationErrorsLogin = (req, res, next) => {
 module.exports = {
   validateLogin,
   validationErrorsLogin,
-  userIsLogged,
+  validateUserLogged,
 }

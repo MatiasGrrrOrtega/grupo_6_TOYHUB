@@ -1,19 +1,23 @@
-const dataProducts = require('../db/products')
+const db = require('../database/models')
 const dataMarcas = require('../db/marcas')
-const dataUsers = require('../db/users')
 
 class homeController {
-  static renderHome(req, res) {
-    res.render('home', {
-      products: dataProducts,
-      marcas: dataMarcas.marcas,
-      usuario: dataUsers,
-      isLogged: {
-        userLogged: req.session.isLoggedIn,
-        userBody: req.session.loggedUser,
-      },
-    })
+  static home(req, res) {
+    try{
+      db.Products.findAll({
+        include: [ {association: 'images'} ]
+      }).then(products => {
+        res.render('home', {
+          products: products,
+          marcas: dataMarcas.marcas,
+          user: req.session.loggedUser,
+        })
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
 }
 
 module.exports = homeController
+

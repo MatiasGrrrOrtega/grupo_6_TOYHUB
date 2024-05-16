@@ -10,7 +10,7 @@
     <title>ToyHub</title>
   </head>
   <body>
-    <% if(isLogged.userLogged && isLogged.userBody.role == "admin") { %>
+    <% if(user != undefined && user.roles_id == 2) { %>
       <%- include('./partials/panelAdmin.ejs') %>
     <% } %>
     <%- include('./partials/header.ejs')  %>
@@ -83,10 +83,10 @@
         <h2 class="title">Te van a encantar</h2>
         <div class="products-list">
           <% products.map((product)=>{ %>
-            <a class="product" href="/products/<%=product.id%>">
+            <a class="product" href="/products/<%= product.id %>">
               <div>
                 <img
-                  src="/images/products/<%=product.img%>"
+                  src="/uploads/photosProducts/<%= product.images[0].name %>"
                   alt="<%= product.name %>"
                 />
                 <h3 class="product-name"><%= product.name %></h3>

@@ -8,9 +8,7 @@
   <title>ToyHub - Admin - All Products</title>
 </head>
 <body>
-  <% if(isLogged.userLogged && isLogged.userBody.role == "admin") { %>
-    <%- include('./partials/panelAdmin.ejs') %>
-  <% } %>
+  <%- include('./partials/panelAdmin.ejs') %>
   <header class="main-header">
     <!-- Logo -->
     <div class="logo-container">
@@ -22,7 +20,7 @@
         <button id="menu-user" class="header-button">
           <img src="/images/logos/user-icon.png" alt="/views/register.html">
         </button>
-        <% if(isLogged.userLogged) { %>
+        <% if(user != undefined) { %>
           <div class="menu-content-user" id="menu-content-user">
             <a href="#" class="user-button">Mi perfil</a>
             <a href="#" class="user-button">Configuracion</a>
@@ -41,25 +39,25 @@
     <div class='product-edit-list'>
       <h1 class='product-add-title'>Editar Productos</h1>
       <table>
-        <tr>
+        <tr class="row-product-column">
           <th>ID</th>
           <th>Nombre</th>
           <th>Categoria</th>
-          <th>Link</th>
           <th>Marca</th>
+          <th>Link</th>
         </tr>
         <% products.map((product)=>{ %>
-          <tr>
+          <tr class="row-product-value">
             <td><%= product.id %></td>
             <td><%= product.name %></td>
-            <td><%= product.category %></td>
+            <td><%= product.category.name %></td>
+            <td><%= product.brand.name %></td>
             <td>
               <a class="button" href='/products/admin/<%= product.id %>/edit'>Editar</a>
-              <form class="form-delete" action='/proucts/admin/<%= product.id %>?_method=DELETE' method='POST'>
-                <input class="button" type="submit" value="Eliminar">
+              <form action='/products/admin/<%= product.id %>?_method=DELETE' method='POST'>
+                <input class="button button-delete" value="Eliminar">
               </form>
             </td>
-            <td><%= product.brand %></td>
           </tr>  
         <% }) %>
       </table>
@@ -88,42 +86,55 @@
 
 <style>
 
-.product-edit-list{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin: 20px 0;
-  padding: 15px;
-  background-color: var(--color-light-50);
-  border-radius: 8px;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
-}
+  .product-edit-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--color-light-50);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+  }
 
-.product-edit-list table{
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
+  .product-edit-list table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
 
-.product-edit-list table th{
-  background-color: var(--color-blue-dark-950);
-  color: var(--color-light-50);
-}
+  .product-edit-list table .row-product-column th{
+    background-color: var(--color-blue-dark-950);
+    color: var(--color-light-50);
+    padding: 10px;
+  }
 
-.product-edit-list .button{
-  display: block;
-  width: 50px;
-  border: none;
-  background-color: var(--color-blue-dark-950);
-  text-decoration: none;
-  color: var(--color-light-50);
-  transition: background-color ease .3s;
-  cursor: pointer;
-}
+  .product-edit-list table .row-product-value td{
+    padding: 10px;
+    border-bottom: 1px solid var(--color-blue-dark-950);
+  }
 
-.product-edit-list .button:hover{
-  background-color: var(--color-light-50);
-  color: var(--color-blue-dark-950);
-}
+  
+  .product-edit-list .button{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: var(--color-blue-dark-950);
+    text-decoration: none;
+    color: var(--color-light-50);
+    transition: background-color ease .3s;
+    cursor: pointer;
+  }
+  
+  .product-edit-list .button-delete{
+    background-color: var(--color-red-600);
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .product-edit-list .button:hover{
+    background-color: var(--color-light-50);
+    color: var(--color-blue-dark-950);
+  }
 </style>

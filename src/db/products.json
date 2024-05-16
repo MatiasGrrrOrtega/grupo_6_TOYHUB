@@ -1,134 +1,72 @@
 [
   {
-    "id": 2,
-    "name": "Sanrio Cinnamoroll-muñeco de peluche",
-    "price": 9.334,
-    "dues": 2.333,
-    "share": 4,
-    "img": "Sanrio-Cinnamoroll-mu-eco-de-peluche-de-gran-tama-o-para-ni-os-y-ni-as.jpg_.webp",
-    "category": "Peluches",
-    "stock": 20,
-    "brand": "Sanrio",
-    "description": "Peluche de Cinnamoroll de gran tamaño para niños y niñas."
-  },
-  {
-    "id": 3,
-    "name": "Sanrio Cinnamoroll-muñeco de peluche",
-    "price": "107.334",
-    "dues": 1.393,
-    "share": "4",
-    "img": "",
-    "category": "1",
-    "stock": "20",
-    "description": "Peluche de Cinnamoroll de gran tamaño para niños y niñas.",
-    "brand": "Sanrio"
-  },
-  {
-    "id": 4,
-    "name": "Figura de acción de Marvel Black Panther",
-    "price": 12.063,
-    "dues": 2.01,
-    "share": 6,
-    "img": "Figuras-de-acci-n-de-Marvel-Black-Panther-nueva-animaci-n-perif-rica-articulaciones-de-dibujos.jpg_.webp",
-    "category": "Figura de acción",
-    "stock": 5,
-    "brand": "Marvel",
-    "description": "Figura de acción de Black Panther de gran tamaño para niños y niñas."
-  },
-  {
-    "id": 5,
-    "name": "Figura de acción de Roronoa Zoro",
-    "price": 2.185,
-    "dues": 1.092,
-    "share": 2,
-    "img": "Banpresto-figura-de-acci-n-de-One-Piece-juguete-de-Anime-Roronoa-Zoro-tres-cuchillos-de.jpg_640x640.jpg_.webp",
-    "category": "Figura de acción",
-    "stock": 8,
-    "brand": "One Piece",
-    "description": "Figura de acción de Roronoa Zoro de gran tamaño para niños y niñas."
-  },
-  {
-    "id": 6,
-    "name": "Princesas Frozen de Disney",
-    "price": 18.867,
-    "dues": 3.144,
-    "share": 6,
-    "img": "Hasbro-Frozen-2-Hair-Salon-Doll-Series-Elsa-Anna-Play-House-Toys-E6950-figuras-de-acci.jpg_.webp",
-    "category": "Figura de acción",
-    "stock": 3,
-    "brand": "Disney",
-    "description": "Figura de acción de las princesas de Frozen de gran tamaño para niños y niñas."
-  },
-  {
-    "id": 7,
-    "name": "Figura de accion de KAngel",
-    "price": 401,
-    "dues": 200,
-    "share": 2,
-    "img": "Figura-DE-ACCI-N-DE-KAngel-de-desfile-emergente-modelo-de-coleccion.webp",
-    "category": "Figura de acción",
-    "stock": 12,
-    "brand": "KAngel",
-    "description": "Figura de acción de KAngel de gran tamaño para niños y niñas."
-  },
-  {
-    "id": 8,
-    "name": "Muñeca vestida de Stitch",
-    "price": 1.63,
-    "dues": 815,
-    "share": 2,
-    "img": "Trajes-de-mu-ecas-de-43-cm-para-mu-ecas-de-17-pulgadas-mono-de-mono.jpg_.webp",
-    "category": "Muñecas",
-    "stock": 7,
-    "brand": "Disney",
-    "description": "Muñeca de Stitch de gran tamaño para niños y niñas."
-  },
-  {
-    "id": 9,
-    "name": "Funko-Pop de rocket de los vengadores",
-    "price": 36.605,
-    "dues": 3.05,
+    "id": "5d78bb05-ad02-4bbc-9a9e-497e76efd036",
+    "name": "Figuras de acción del Dr. Strange",
+    "price": 328.943,
+    "dues": 27411.92,
     "share": 12,
-    "img": "Guardianes-de-la-galaxia-cohete-mapache-anime-perif-rico-kawaii-lindo-dibujos-animados-bobblehead-mu-eca.jpg_.webp",
-    "category": "Muñecas",
-    "stock": 4,
-    "brand": "Marvel",
-    "description": "Funko-Pop de Rocket de los vengadores de gran tamaño para niños y niñas."
+    "images": [
+      "1715456903335-Figuras-de-acci-n-del-Dr-Strange-para-ni-os-juguetes-originales-Kit-de-modelos-Mms645.jpg_.webp",
+      "1715456903335-Figuras-de-acci-n-del-Dr-Strange-para-ni-os-juguetes-originales-Kit-de-modelos-Mms645.jpg_ (1).webp",
+      "1715456903336-Figuras-de-acci-n-del-Dr-Strange-para-ni-os-juguetes-originales-Kit-de-modelos-Mms645.jpg_ (2).webp",
+      "1715456903336-Figuras-de-acci-n-del-Dr-Strange-para-ni-os-juguetes-originales-Kit-de-modelos-Mms645.jpg_ (3).webp",
+      "1715456903338-Figuras-de-acci-n-del-Dr-Strange-para-ni-os-juguetes-originales-Kit-de-modelos-Mms645.jpg_ (4).webp"
+    ],
+    "category": "Figuras-de-Accion",
+    "stock": 23,
+    "brand": "marvel",
+    "description": "Hot Toys Kit de modelo Original Mms645 1/6 películas Dr. Strange 4,0 Anime figura de acción modelo Robot regalo para niños 310mm\r\nMarca: Hot Toys\r\nModelo: MMS645\r\nEscala: 1/6\r\nEstado de venta: En stock"
   },
   {
-    "id": 10,
-    "name": "Peluche Pou",
-    "price": 818,
-    "dues": 407,
-    "share": 2,
-    "img": "p2.webp",
-    "category": "Peluches",
-    "stock": 6,
-    "brand": "Pou",
-    "description": "Pou-muñeco de peluche de 22cm/8,6 pulgadas, juguete de Alien de dibujos animados, Kawaii, figura de juego caliente, regalos para fanáticos."
+    "id": "0b0de66c-ba5b-4622-be1c-422650ae3ed8",
+    "name": "Figura de Goku de Dragon Ball Z Ssj3",
+    "price": 26.409,
+    "dues": 4401.5,
+    "share": 6,
+    "images": [
+      "1715468931543-Figura-de-Goku-de-Dragon-Ball-Z-Ssj3-estatua-de-Super-Saiyan-de-Pvc-de-30cm.jpg_ (1).webp",
+      "1715468931544-Figura-de-Goku-de-Dragon-Ball-Z-Ssj3-estatua-de-Super-Saiyan-de-Pvc-de-30cm.jpg_ (2).webp",
+      "1715468931546-Figura-de-Goku-de-Dragon-Ball-Z-Ssj3-estatua-de-Super-Saiyan-de-Pvc-de-30cm.jpg_ (3).webp",
+      "1715468931547-Figura-de-Goku-de-Dragon-Ball-Z-Ssj3-estatua-de-Super-Saiyan-de-Pvc-de-30cm.jpg_.webp"
+    ],
+    "category": "Figuras-de-Accion",
+    "stock": 70,
+    "brand": "bandai",
+    "description": "Estatua de PVC increíblemente detallada basada en el cómic.\r\nHecho de plástico PVC.\r\nEsta estatua está elaborada por expertos y esculpida meticulosamente para parecerse a la figura cómica.\r\n¡Asegúrese de recoger esto y mejorar su pantalla con otras figuras increíbles!"
   },
   {
-    "id": 11,
-    "name": "Puella Magi Madoka Magic Girl",
-    "price": 57.266,
-    "dues": 3.181,
-    "share": 18,
-    "img": "p3.webp",
-    "category": "Figura de acción",
-    "stock": 2,
-    "brand": "Madoka",
-    "description": "Figura de acción de Puella Magi Madoka"
-  },
-  {
-    "id": 12,
-    "name": "Figura de acción de Superman",
-    "price": 6.547,
-    "dues": 2.182,
+    "id": "380fea6c-485e-4d60-9eb7-c6fc78c75ad8",
+    "name": "Figura de BATMAN (knighfall)",
+    "price": 35.801,
+    "dues": 11933.67,
     "share": 3,
-    "img": "p4.webp",
-    "category": "Figura de acción",
-    "stock": 9,
-    "brand": "DC",
-    "description": "Figura de acción de Superman de gran tamaño para niños y niñas."
+    "images": [
+      "1715469304338-McFarlane-figuras-de-BATMAN-knighfall-c-mics-DC-multiverso-7-pulgadas-regalo-de-juguete.jpg_.webp",
+      "1715469304339-McFarlane-figuras-de-BATMAN-knighfall-c-mics-DC-multiverso-7-pulgadas-regalo-de-juguete.jpg_ (2).webp",
+      "1715469304404-McFarlane-figuras-de-BATMAN-knighfall-c-mics-DC-multiverso-7-pulgadas-regalo-de-juguete.jpg_ (3).webp",
+      "1715469304406-McFarlane-figuras-de-BATMAN-knighfall-c-mics-DC-multiverso-7-pulgadas-regalo-de-juguete.jpg_ (4).webp",
+      "1715469304408-McFarlane-figuras-de-BATMAN-knighfall-c-mics-DC-multiverso-7-pulgadas-regalo-de-juguete.jpg_ (1).webp"
+    ],
+    "category": "Figuras-de-Accion",
+    "stock": 100,
+    "brand": "megahouse",
+    "description": "McFarlane juguetes DC Multiverse Batman™FIGURA DE ACCIÓN DE Detective Comics, juguete de regalo, escala de 7 \", #27 (primera apariencia)"
+  },
+  {
+    "id": "7513b62d-9474-4030-badd-948b21104d4f",
+    "name": "Figura de acción de Super-Man DC",
+    "price": 31.823,
+    "dues": 10607.67,
+    "share": 3,
+    "images": [
+      "1715472024556-GONG-figura-de-acci-n-de-soldado-DC-Comics-a-escala-1-12-multiverso-el-para.jpg_.webp",
+      "1715472024557-GONG-figura-de-acci-n-de-soldado-DC-Comics-a-escala-1-12-multiverso-el-para.png_.webp",
+      "1715472024558-GONG-figura-de-acci-n-de-soldado-DC-Comics-a-escala-1-12-multiverso-el-para.jpg_640x640.jpg_.webp",
+      "1715472024560-GONG-figura-de-acci-n-de-soldado-DC-Comics-a-escala-1-12-multiverso-el-para.jpg_ (1).webp"
+    ],
+    "category": "Peluches",
+    "stock": 70,
+    "brand": "megahouse",
+    "description": "1. Escala: 1/12\r\n2.Color: como en la imagen\r\n3,1/12(6 \") Accesorio de figura de acción\r\n100% nuevo, nunca se ha jugado"
   }
 ]

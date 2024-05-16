@@ -13,18 +13,21 @@
 <body>
 
   <%- include('./partials/header.ejs')  %>
-
+  <% if(user != undefined && user.role == "admin") { %>
+    <%- include('./partials/panelAdmin.ejs') %>
+  <% } %>
   <main class="main main-product-detail">
     <section class="product-detail-container">
       <div class="presentation-images">
         <figure>
-          <img src="/images/products/<%= product.img %>" alt="producto1" />
+          <img src="/uploads/photosProducts/<%= product.images[1] %>" alt="producto1" />
         </figure>
         <div class="miniature-images">
-          <img src="/images/products/<%= product.img %>" alt="producto1" />
-          <img src="/images/products/<%= product.img %>" alt="producto2" />
-          <img src="/images/products/<%= product.img %>" alt="producto3" />
-          <img src="/images/products/<%= product.img %>" alt="producto4" />
+          <% if(product.images.length > 1){ %>
+            <% product.images.map((image, index)=>{ %>
+              <img src="/uploads/photosProducts/<%= image %>" alt="producto<%= index + 1 %>" />
+            <% }) %>
+          <% } %>
         </div>
       </div>
       <div class="product-detail">
@@ -65,20 +68,18 @@
     <section class="similar-products-container">
       <h2>Quizas te interesen estos productos</h2>
       <div class="similar-products">
-        <% productsRecommended.map((product)=>{ %>
-          <% if(product.id-1 > 4){ %>
-                <% return %>
-          <% }else{ %>
-                <a class="product" href="/products/<%=product.id%>">
+        <% productsRecommended.map((otherProduct)=>{ %>
+          <% if(otherProduct.category == product.category && otherProduct.name !== product.name){ %>
+                <a class="product" href="/products/<%=otherProduct.id%>">
                   <img
-                    src="/images/products/<%=product.img%>"
-                    alt="<%= product.name %>"
+                    src="/uploads/photosProducts/<%=otherProduct.images[0]%>"
+                    alt="<%= otherProduct.name %>"
                   />
                   <div class="product-bottom">
                     <div class="product-info">
-                      <h3 class="name"><%= product.name %></h3>
-                      <p class="price"><strong>ARS</strong>$<%= product.price %></p>
-                      <p class="dues"><%= product.share %> cuotas de $<%= product.dues %></p>
+                      <h3 class="name"><%= otherProduct.name %></h3>
+                      <p class="price"><strong>ARS</strong>$<%= otherProduct.price %></p>
+                      <p class="dues"><%= otherProduct.share %> cuotas de $<%= otherProduct.dues %></p>
                     </div>
                     <div class="product-button">
                       <button class="add">AÑADIR AL CARRO <i class="fa-solid fa-cart-shopping fa-xl"></i></button>

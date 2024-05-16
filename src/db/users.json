@@ -1,3 +1,13 @@
 [
-
+  {
+    "id": "bbf1074d-74dc-4781-990c-4ce1f3d52c08",
+    "name": "Matias",
+    "lastname": "Ortega",
+    "email": "aritomax75@gmail.com",
+    "photo": "1714848415232-149071.png",
+    "telephone": "",
+    "password": "$2a$10$taQ3zVdb82HVUpePKgQoN.WKY/DT74nc7NsZJIaGbzDIZuV417W3S",
+    "confirm_password": "$2a$10$Yj.9J0wUbmBJvyiWBQ/yXeiqP26nr4ay.f8VmukcTqVZkGU8Iknxy",
+    "role": "admin"
+  }
 ]

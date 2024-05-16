@@ -7,9 +7,7 @@
   height: 100vh;
 }
 .main-register{
-  padding: 20px;
-  height: 100vh;
-  margin: auto;
+  padding: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,8 +124,8 @@
   position: absolute;
   width: 200px;
   height: 32px;
-  top: 0;
-  left: calc(50% - 100px);
+  top: 10px;
+  left: calc(68% - 100px);
 }
 
 .form-group-register #src-file::before {
@@ -150,8 +148,16 @@
 }
 
 @media (min-width: 768px){
+  .main-register{
+    height: 100%;
+  }
+
   .register{
     width: 60%;
+  }
+
+  .form-group-register .form-group--image::before {
+    left: calc(50% - 100px);
   }
 }
 

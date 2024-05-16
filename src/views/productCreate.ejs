@@ -11,38 +11,36 @@
 </head>
 
 <body>
-  <% if(isLogged.userLogged && isLogged.userBody.role == "admin") { %>
     <%- include('./partials/panelAdmin.ejs') %>
-  <% } %>
     <!-- Seccion del HEADER -->
-  <header class="main-header">
-    <!-- Logo -->
-    <div class="logo-container">
-      <a href="/"><img src="/images/logo_toyhub.jpg" alt="Logo de ToyHub" /></a>
-    </div>
-
-    <div class="user-cart-container">
-      <div class="user-button">
-        <button id="menu-user" class="header-button">
-          <img src="/images/logos/user-icon.png" alt="/views/register.html">
-        </button>
-        <% if(isLogged.userLogged) { %>
-          <div class="menu-content-user" id="menu-content-user">
-            <a href="#" class="user-button">Mi perfil</a>
-            <a href="#" class="user-button">Configuracion</a>
-            <a href="/user/logout" class="user-button">Cerrar sesión</a>
-          </div>
-        <% }else{ %>
-          <div class="menu-content-user" id="menu-content-user">
-            <a href="/user/login" class="user-button">Iniciar sesión</a>
-            <a href="/user/register" class="user-button">Registrarse</a>
-          </div>
-        <% }%>
+    <header class="main-header">
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="/"><img src="/images/logo_toyhub.jpg" alt="Logo de ToyHub" /></a>
       </div>
-    </div>
-  </header>
-    <main class='main main-product'>
-      <form class="form-create" action='/products' method='POST'>
+
+      <div class="user-cart-container">
+        <div class="user-button">
+          <button id="menu-user" class="header-button">
+            <img src="/images/logos/user-icon.png" alt="/views/register.html">
+          </button>
+          <% if(user != undefined) { %>
+            <div class="menu-content-user" id="menu-content-user">
+              <a href="#" class="user-button">Mi perfil</a>
+              <a href="#" class="user-button">Configuracion</a>
+              <a href="/user/logout" class="user-button">Cerrar sesión</a>
+            </div>
+          <% }else{ %>
+            <div class="menu-content-user" id="menu-content-user">
+              <a href="/user/login" class="user-button">Iniciar sesión</a>
+              <a href="/user/register" class="user-button">Registrarse</a>
+            </div>
+          <% }%>
+        </div>
+      </div>
+    </header>
+    <main class='main-product'>
+      <form class="form-create" action='/products/admin/create' method='POST' enctype="multipart/form-data">
         <h1 class='product-add-title'>Añadir Producto</h1>
         <div class='product-add-form-group'>
           <label for='name'>Nombre</label>
@@ -57,15 +55,25 @@
           <input type='number' id='share' name='share' class='form-control' required />
         </div>
         <div class='product-add-form-group'>
-          <label for='img'>Imagen</label>
-          <input type='file' id='img' name='img' accept='image/*' class='form-control' required />
+          <label for='images'>Selecciona las imagenes del producto</label>
+
+          <div>
+            <p>Principal</p>
+            <input type='file' id='images' name='images' accept='image/*' class='form-control'/>
+            <p>Secundarias</p>
+            <input type='file' id='images' name='images' accept='image/*' class='form-control'/>
+            <input type='file' id='images' name='images' accept='image/*' class='form-control'/>
+            <input type='file' id='images' name='images' accept='image/*' class='form-control'/>
+            <input type='file' id='images' name='images' accept='image/*' class='form-control'/>
+          </div>
         </div>
         <div class='product-add-form-group'>
           <label for='category'>Categoria</label>
           <select name='category' id='category'>
-            <option value='Peluches'>Peluches</option>
-            <option value='Figuras-de-Accion'>Figuras de Accion</option>
-            <option value='Muñecas'>Muñecas</option>
+            <option value='peluches'>Peluches</option>
+            <option value='figuras-de-accion'>Figuras de Accion</option>
+            <option value='muñecas'>Muñeco/a</option>
+            <option value='funko'>Funko-Pop</option>
           </select>
         </div>
         <div class='product-add-form-group'>
@@ -74,7 +82,16 @@
         </div>
         <div class='product-add-form-group'>
           <label for='brand'>Marca</label>
-          <input type='text' name='brand' id='brand'>
+          <select name='brand' id='brand'>
+            <option value='sega'>SEGA</option>
+            <option value='bandai'>BANDAI</option>
+            <option value='banpresto'>BANPRESTO</option>
+            <option value='disney'>DISNEY</option>
+            <option value='hasbro'>HASBRO</option>
+            <option value='marvel'>MARVEL</option>
+            <option value='megahouse'>MEGAHOUSE</option>
+            <option value='dc'>DC</option>
+          </select>
         </div>
         <div class='product-add-form-group'>
           <label for='description'>Descripcion</label>
@@ -98,11 +115,6 @@
     }
   }
 
-  // Función para desplegar el menú de usuario
-  btnMenuUser.addEventListener("click", () => {
-    let menu = document.getElementById("menu-content-user");
-    toggleMenu(menu);
-  });
 </script>
 
 </html>
